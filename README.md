@@ -9,6 +9,33 @@ The meme project is a set of repositories to capture my progress and projects in
 | [MEME OS 3](https://github.com/tanner-johnson2718/MEME_OS_3) | A report style project that covers mainly topics one would see in a 4000 level CS Class. More high level and in user land compare to 1 and 2. Goal is to master the basics of systems programming | Not done, but Doc and structure is exelent |
 | [Crypto](https://github.com/tanner-johnson2718/Crypto) | Repo for explorint cryptography | Very starting point, needs some love |
 
+# Up Next
+
+* MEME Protocols
+    *USB protocol 
+    *UART protocol
+    *PCI
+    *CAN protocol
+    *JTAG
+    *SPI
+    *I2C
+    *Ethernet
+    *Wifi
+* Other Embedded Topics
+    *device trees
+    *Linux start up
+    *boot loaders
+    *linux building
+    *scheduler
+    *dma
+    *Whats all this shit running on my limux sys
+* Targeting Real Hardware
+    * BBB
+    * Rpi
+    * Arduino
+    * ESP 32
+    * etc
+
 # Index
 
 Goal here is to have a data structure to be searched when looking for a specific topic. Might need to write a script to do this properly.
