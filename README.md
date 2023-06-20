@@ -12,23 +12,25 @@ The meme project is a set of repositories to capture my progress and projects in
 # Up Next
 
 * MEME Protocols
-    *USB protocol 
-    *UART protocol
-    *PCI
-    *CAN protocol
-    *JTAG
-    *SPI
-    *I2C
-    *Ethernet
-    *Wifi
+    * USB protocol 
+    * UART protocol
+    * PCI
+    * CAN protocol
+    * JTAG
+    * SPI
+    * I2C
+    * Ethernet
+    * Wifi
+
 * Other Embedded Topics
-    *device trees
-    *Linux start up
-    *boot loaders
-    *linux building
-    *scheduler
-    *dma
-    *Whats all this shit running on my limux sys
+    * device trees
+    * Linux start up
+    * boot loaders
+    * linux building
+    * scheduler
+    * dma
+    * Whats all this shit running on my limux sys
+    
 * Targeting Real Hardware
     * BBB
     * Rpi
