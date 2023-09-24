@@ -8,19 +8,9 @@ The meme project is a set of repositories to capture my progress and projects in
 | [MEME OS 2](https://github.com/tanner-johnson2718/MEME_OS_2) | A bare bones, from scratch OS running on x86 Qemu. Purpose is to explore creating bare metal drivers and OS code, and to explore the hardware architecture of x86. | Not done and needs doc |
 | [MEME OS 3](https://github.com/tanner-johnson2718/MEME_OS_3) | A report style project that covers mainly topics one would see in a 4000 level CS Class. More high level and in user land compare to 1 and 2. Goal is to master the basics of systems programming | Not done, but Doc and structure is excellent |
 | [Crypto](https://github.com/tanner-johnson2718/Crypto) | Repo for exploring cryptography | Very starting point, needs some love |
+| [Meme Protocol](https://github.com/tanner-johnson2718/MEME_Protocol) | Repo to catalog and explore protocols | Just starting |
 
 # Up Next
-
-* MEME Protocols
-    * USB protocol 
-    * UART protocol
-    * PCI
-    * CAN protocol
-    * JTAG
-    * SPI
-    * I2C
-    * Ethernet
-    * Wifi
 
 * Other Embedded Topics
     * device trees
