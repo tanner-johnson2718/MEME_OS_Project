@@ -20,13 +20,33 @@ The meme project is a set of repositories to capture my progress and projects in
     * scheduler
     * dma
     * Whats all this shit running on my linux sys
+    * pci and usb
+    * sysfs and all those Bus dirs
+    * container of
+    * offset of
+    * udev
+    * namespace
+    * signals
     
 * Targeting Real Hardware
     * BBB
-    * Rpi
-    * Arduino
+    * Arduino Uno
     * ESP 32
-    * etc
+
+* Planned Labs
+    * TCP/IP Lab
+    * Virt mem lab
+    * File
+
+* Wrapping Up Already Started
+    * Go back to MEME OS 3 and look a little closer of how a program is laid out in memory (including kernel stack, etc)
+    * wrap up meme 2, boot process and irq focus 
+    * linker scripts in meme 3
+    * Go line by line on rpi boot and see whats up
+    * PI boot loader,  how does it work
+    * go back over os1. what is being build. why so long. how is it being packaged
+    * meme os 1 buildtime optimization
+    * Finish indexing
 
 # Index and Key Deliverables
 
@@ -57,3 +77,15 @@ TODO
     * [Compiler Symbols](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Linking#globals-locals-externs-functions-and-their-symbols)
     * [Relocation and PIC](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Linking#relocation)
     * [440 byte hello world](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Linking#exercise-create-a-minimal-hello-world)
+* [Dynamic Loader (ld)](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Loading)
+    * [Process Image and How cmd line args and env args are passed](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Loading#command-line-args-and-environment-variables)
+    * [LibC Program call graph](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Loading#libc-and-dynamic-linker-invocation)
+* [Attempt at making my own LibC](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/MEME_Lib)
+* [First Stab at diging into processes](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes)
+
+
+TODO FINISH REST
+
+## MEME Crypto
+
+## MEME ETH Lab
