@@ -43,8 +43,10 @@ The meme project is a set of repositories to capture my progress and projects in
     * wrap up meme 2, boot process and irq focus 
     * linker scripts in meme 3
     * Go line by line on rpi boot and see whats up
-    * PI boot loader,  how does it work
+    * PI boot loader,  how does it work. SD card layout
+        * cmdline.txt, config.txt, etc
     * go back over os1. what is being build. why so long. how is it being packaged
+        * more indepth look at buildroot
     * meme os 1 buildtime optimization
     * Finish indexing
 
