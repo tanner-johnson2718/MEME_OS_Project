@@ -7,22 +7,19 @@ The meme project is a set of repositories to capture my progress and projects in
 | [MEME OS 1](https://github.com/tanner-johnson2718/MEME_OS) | First Stab at buildroot .A collection of scripts and example that build a linux kernel using Build Root targeting Qemu. Attached debugger to linux kernel. | Done :heavy_check_mark: |
 | [MEME OS 2](https://github.com/tanner-johnson2718/MEME_OS_2) | A bare bones, from scratch OS running on x86 Qemu. Purpose is to explore creating bare metal drivers and OS code, and to explore the hardware architecture of x86. | Not done, needs to wrapped up with what it has |
 | [MEME OS 3](https://github.com/tanner-johnson2718/MEME_OS_3) | A report style project that covers linking, compilation, processes, some system call information, ELF format, etc.| Done :heavy_check_mark: |
-| [Crypto](https://github.com/tanner-johnson2718/Crypto) | Repo for exploring cryptography | Very starting point, needs some love |
-| [Layer 1 and 2 Ethernet Lab](https://github.com/tanner-johnson2718/MEME_ETH_LAB) | - | - |
+| [Crypto](https://github.com/tanner-johnson2718/Crypto) | Repo for exploring cryptography. Followed a set of challanges and used as guide for study. | Not done but is wrapped up with what it has :heavy_check_mark: |
+| [Layer 1 and 2 Ethernet Lab](https://github.com/tanner-johnson2718/MEME_ETH_LAB) | Ethernet lab style project using an RPI 4 | In Progress |
 
 # Up Next
 
 * Wrapping Up Already Started
-    * Go back to MEME OS 3 and look a little closer of how a program is laid out in memory (including kernel stack, etc)
     * wrap up meme 2, boot process and irq focus 
-    * linker scripts in meme 3
     * Go line by line on rpi boot and see whats up
     * PI boot loader,  how does it work. SD card layout
         * cmdline.txt, config.txt, etc
     * go back over os1. what is being build. why so long. how is it being packaged
         * more indepth look at buildroot
     * meme os 1 buildtime optimization
-    * Finish indexing
 
 * Targeting Real Hardware
     * BBB
@@ -32,6 +29,7 @@ The meme project is a set of repositories to capture my progress and projects in
 * Planned Labs
     * TCP/IP Lab
     * Virt mem lab
+        * how a program is laid out in memory (including kernel stack, etc)
     * File
     * 802.11 wifi 
 
@@ -50,6 +48,7 @@ The meme project is a set of repositories to capture my progress and projects in
     * udev
     * namespace
     * signals
+    * linker script
 
 # Index and Key Deliverables
 
@@ -90,11 +89,24 @@ TODO
     * [Clone](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#ids)
     * [rusage](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#runtime-stats)
     * [task struct](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#linux-proc--task-structure)
-* [SysCall Doc]
-
-
-TODO FINISH REST
+* [SysCall Doc](https://github.com/tanner-johnson2718/MEME_OS_3/blob/main/System_Calls/README.md#exercise-make-your-own-syscall)
 
 ## MEME Crypto
 
+* [Art of Computer Programming and Crypto Books](https://github.com/tanner-johnson2718/Crypto)
+* [AES](https://github.com/tanner-johnson2718/Crypto/tree/master/AES)
+    * [AES Spec](https://github.com/tanner-johnson2718/Crypto/blob/master/AES/AES_FIPS197.pdf)
+    * [AES Implementation](https://github.com/tanner-johnson2718/Crypto/blob/master/AES/aes.py)
+    * [AES EBC Hack](https://github.com/tanner-johnson2718/Crypto/blob/master/AES/aes_ebc_break.py)
+    * [AES CBC Hack](https://github.com/tanner-johnson2718/Crypto/blob/master/AES/cbc_bit_flip.py)
+* [Number Theory](https://github.com/tanner-johnson2718/Crypto/tree/master/number_theory)
+    * [Eucledian Algorithm](https://github.com/tanner-johnson2718/Crypto/blob/master/number_theory/Euclidean_Algo.pdf)
+    * [Galois Fields](https://github.com/tanner-johnson2718/Crypto/blob/master/number_theory/galois.pdf)
+* [Psedo RNG](https://github.com/tanner-johnson2718/Crypto/tree/master/prng)
+* [XOR Cipher](https://github.com/tanner-johnson2718/Crypto/tree/master/xor_cipher)
+
 ## MEME ETH Lab
+
+* [Raw Sockets](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/P1.1)
+* [RPI Buildroot System](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/P2.2).
+    * [Scripts Associated with RPI buildroot system](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/P2.2)
