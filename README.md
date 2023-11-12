@@ -12,6 +12,29 @@ The meme project is a set of repositories to capture my progress and projects in
 
 # Up Next
 
+* Wrapping Up Already Started
+    * Go back to MEME OS 3 and look a little closer of how a program is laid out in memory (including kernel stack, etc)
+    * wrap up meme 2, boot process and irq focus 
+    * linker scripts in meme 3
+    * Go line by line on rpi boot and see whats up
+    * PI boot loader,  how does it work. SD card layout
+        * cmdline.txt, config.txt, etc
+    * go back over os1. what is being build. why so long. how is it being packaged
+        * more indepth look at buildroot
+    * meme os 1 buildtime optimization
+    * Finish indexing
+
+* Targeting Real Hardware
+    * BBB
+    * Arduino Uno
+    * ESP 32
+
+* Planned Labs
+    * TCP/IP Lab
+    * Virt mem lab
+    * File
+    * 802.11 wifi 
+
 * Other Embedded Topics
     * device trees
     * Linux start up
@@ -27,28 +50,6 @@ The meme project is a set of repositories to capture my progress and projects in
     * udev
     * namespace
     * signals
-    
-* Targeting Real Hardware
-    * BBB
-    * Arduino Uno
-    * ESP 32
-
-* Planned Labs
-    * TCP/IP Lab
-    * Virt mem lab
-    * File
-
-* Wrapping Up Already Started
-    * Go back to MEME OS 3 and look a little closer of how a program is laid out in memory (including kernel stack, etc)
-    * wrap up meme 2, boot process and irq focus 
-    * linker scripts in meme 3
-    * Go line by line on rpi boot and see whats up
-    * PI boot loader,  how does it work. SD card layout
-        * cmdline.txt, config.txt, etc
-    * go back over os1. what is being build. why so long. how is it being packaged
-        * more indepth look at buildroot
-    * meme os 1 buildtime optimization
-    * Finish indexing
 
 # Index and Key Deliverables
 
@@ -84,6 +85,12 @@ TODO
     * [LibC Program call graph](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Loading#libc-and-dynamic-linker-invocation)
 * [Attempt at making my own LibC](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/MEME_Lib)
 * [First Stab at diging into processes](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes)
+    * [Process State Machine](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#process-creation-manipulation-and-execution)
+    * [Group and Thread IDs](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#ids)
+    * [Clone](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#ids)
+    * [rusage](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#runtime-stats)
+    * [task struct](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#linux-proc--task-structure)
+* [SysCall Doc]
 
 
 TODO FINISH REST
