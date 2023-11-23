@@ -111,4 +111,9 @@ TODO
     * [Scripts Associated with RPI buildroot system](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/P2.2)
 * [Using Sysfs to find Network HW info](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/P2.1#using-sysfs-to-play-with-rpi-eth-devices)
     * [Sysfs Appendix](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/P2.1#sysfs-appendix)
-   
+* [Hacking a PHY driver](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.2/README.md#hacking-the-bcm54213pe-driver)
+    * [Raw Socket ETH Code](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/extern_packages/ethraw)
+    * [MDIO Bus and phytool](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.2/README.md#mdio-bus-hacking)
+    * [kdb](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.2/README.md#setting-up-the-debug-environment)
+    * [flickering the Eth port LEDs](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.2/README.md#messing-with-the-leds)
+    * [kdb debug extentions](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/extern_packages/kdbhelper)
