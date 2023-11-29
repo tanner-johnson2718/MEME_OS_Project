@@ -117,3 +117,9 @@ TODO
     * [kdb](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.2/README.md#setting-up-the-debug-environment)
     * [flickering the Eth port LEDs](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.2/README.md#messing-with-the-leds)
     * [kdb debug extentions](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/extern_packages/kdbhelper)
+* [Hacking a MAC Driver](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/P2.3)
+    * [pycparser scripts](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/scripts/cpygdb)
+        * This really didnt go anywhere but its a good starting point for any future C parsing projects
+    * [KDMX and A Really Good Single COM Port debug system](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.3/gdb_revisited.md)
+    * [GDB Cheat Sheet v2](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.3/gdb_revisited.md#gdb-cheat-sheet-20)
+    * [Changing a MAC addr and Promiscious mode on a NIC](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.3/init_notes.md)
