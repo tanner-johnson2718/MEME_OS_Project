@@ -9,6 +9,7 @@ The meme project is a set of repositories to capture my progress and projects in
 | [MEME OS 3](https://github.com/tanner-johnson2718/MEME_OS_3) | A report style project that covers linking, compilation, processes, some system call information, ELF format, etc.| Done :heavy_check_mark: |
 | [Crypto](https://github.com/tanner-johnson2718/Crypto) | Repo for exploring cryptography. Followed a set of challanges and used as guide for study. | Not done but is wrapped up with what it has :heavy_check_mark: |
 | [Layer 1 and 2 Ethernet Lab](https://github.com/tanner-johnson2718/MEME_ETH_LAB) | Ethernet lab style project using an RPI 4 | In Progress |
+| [PI 4 JTAG Debugger](https://github.com/tanner-johnson2718/PI_JTAG_DBGR) | Run open OCD and use the rpi 4 as a JTAG debugger and programmer | In progress | 
 
 # Up Next
 
@@ -24,7 +25,6 @@ The meme project is a set of repositories to capture my progress and projects in
 * Targeting Real Hardware
     * BBB
     * Arduino Uno
-    * ESP 32
 
 * Planned Labs
     * TCP/IP Lab
@@ -123,3 +123,11 @@ TODO
     * [KDMX and A Really Good Single COM Port debug system](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.3/gdb_revisited.md)
     * [GDB Cheat Sheet v2](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.3/gdb_revisited.md#gdb-cheat-sheet-20)
     * [Changing a MAC addr and Promiscious mode on a NIC](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.3/init_notes.md)
+    * [VA to PA Sysfs based Kernel Module](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/extern_packages/v2p)
+
+## RPI 4 JTAG Debugger
+
+* [Init Set up and getting a JTAG open on a ESP 32 using the Raspberry PI](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/Init_PI_JTAG_Test.md)
+    * [PI JTAG Set up](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/Init_PI_JTAG_Test.md#init-pi-os-set-up)
+    * [ESP 32 Hello World and Build Env Set up](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/Init_PI_JTAG_Test.md#esp-32-set-up)
+    * [OpenOCD Cheat Sheet](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/Init_PI_JTAG_Test.md#openocd-and-remote-debugging)
