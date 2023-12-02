@@ -8,7 +8,7 @@ The meme project is a set of repositories to capture my progress and projects in
 | [MEME OS 2](https://github.com/tanner-johnson2718/MEME_OS_2) | A bare bones, from scratch OS running on x86 Qemu. Purpose is to explore creating bare metal drivers and OS code, and to explore the hardware architecture of x86. | Not done, needs to wrapped up with what it has |
 | [MEME OS 3](https://github.com/tanner-johnson2718/MEME_OS_3) | A report style project that covers linking, compilation, processes, some system call information, ELF format, etc.| Done :heavy_check_mark: |
 | [Crypto](https://github.com/tanner-johnson2718/Crypto) | Repo for exploring cryptography. Followed a set of challanges and used as guide for study. | Not done but is wrapped up with what it has :heavy_check_mark: |
-| [Layer 1 and 2 Ethernet Lab](https://github.com/tanner-johnson2718/MEME_ETH_LAB) | Ethernet lab style project using an RPI 4 | In Progress |
+| [Layer 1 and 2 Ethernet Lab](https://github.com/tanner-johnson2718/MEME_ETH_LAB) | Ethernet lab style project using an RPI 4 | Didn't get as far as I wanted but the JTAG project took my heart. Got lots of good practice and info and some good shit to build on. See below |
 | [PI 4 JTAG Debugger](https://github.com/tanner-johnson2718/PI_JTAG_DBGR) | Run open OCD and use the rpi 4 as a JTAG debugger and programmer | In progress | 
 
 # Up Next
@@ -131,3 +131,4 @@ TODO
     * [PI JTAG Set up](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/Init_PI_JTAG_Test.md#init-pi-os-set-up)
     * [ESP 32 Hello World and Build Env Set up](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/Init_PI_JTAG_Test.md#esp-32-set-up)
     * [OpenOCD Cheat Sheet](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/Init_PI_JTAG_Test.md#openocd-and-remote-debugging)
+* [Targeting an RPI4 via JTAG](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/RPI4_JTAG_Target.md)
