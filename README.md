@@ -7,41 +7,35 @@ The meme project is a set of repositories to capture my progress and projects in
 | [MEME OS 1](https://github.com/tanner-johnson2718/MEME_OS) | First Stab at buildroot .A collection of scripts and example that build a linux kernel using Build Root targeting Qemu. Attached debugger to linux kernel. | Done :heavy_check_mark: |
 | [MEME OS 2](https://github.com/tanner-johnson2718/MEME_OS_2) | A bare bones, from scratch OS running on x86 Qemu. Purpose is to explore creating bare metal drivers and OS code, and to explore the hardware architecture of x86. | Not done, needs to wrapped up with what it has |
 | [MEME OS 3](https://github.com/tanner-johnson2718/MEME_OS_3) | A report style project that covers linking, compilation, processes, some system call information, ELF format, etc.| Done :heavy_check_mark: |
-| [Crypto](https://github.com/tanner-johnson2718/Crypto) | Repo for exploring cryptography. Followed a set of challanges and used as guide for study. | Not done but is wrapped up with what it has :heavy_check_mark: |
-| [Layer 1 and 2 Ethernet Lab](https://github.com/tanner-johnson2718/MEME_ETH_LAB) | Ethernet lab style project using an RPI 4. Focus on code, scripts and other "hands on" style deliverables. | Just Needs two more write ups when I get another target PI.  |
+| [Crypto](https://github.com/tanner-johnson2718/Crypto) | Repo for exploring cryptography. Followed a set of challanges and used as guide for study. | Not really done but is wrapped up with what it has :heavy_check_mark: |
+| [Layer 1 and 2 Ethernet Lab](https://github.com/tanner-johnson2718/MEME_ETH_LAB) | Ethernet lab style project using an RPI 4. Focus on code, scripts and other "hands on" style deliverables. | Done but should come back and finish what is annoatated in the next section  |
 | [PI 4 JTAG Debugger](https://github.com/tanner-johnson2718/PI_JTAG_DBGR) | Run open OCD and use the rpi 4 as a JTAG debugger and programmer | In progress | 
 
 # Up Next
 
 * Wrapping Up Already Started
     * wrap up meme 2, boot process and irq focus 
-    * Go line by line on rpi boot and see whats up
-    * PI boot loader,  how does it work. SD card layout
-        * cmdline.txt, config.txt, etc
-    * go back over os1. what is being build. why so long. how is it being packaged
-        * more indepth look at buildroot
-    * meme os 1 buildtime optimization
     * MEME ETH
         * Track a packet
         * ARP
-
-* Targeting Real Hardware
-    * BBB
-    * Arduino Uno
 
 * Planned Labs
     * TCP/IP Lab
     * Virt mem lab
         * how a program is laid out in memory (including kernel stack, etc)
     * File
-    * 802.11 wifi 
+    * 802.11 wifi
+    * Buildroot v3
+    * Scheduler Lab
 
 * Other Embedded Topics
     * device trees
     * Linux start up
+        * Go line by line on boot and figure out what it all means
     * boot loaders
-    * linux building
-    * scheduler
+        * Specifically look at the PI or ESP32 boot loader
+        * PI sd card layout
+        * cmdlint.txt, config.txt, etc
     * dma
     * Whats all this shit running on my linux sys
     * pci and usb
@@ -51,6 +45,7 @@ The meme project is a set of repositories to capture my progress and projects in
     * namespace
     * signals
     * linker script
+    * User accounts and perms
 
 # Index and Key Deliverables
 
@@ -62,7 +57,12 @@ The meme project is a set of repositories to capture my progress and projects in
 
 ## MEME OS 2
 
-TODO
+* [8250 serial driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/serial.c)
+* [GDT Memory Segmentation](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/gdt.c)
+* [PIC 8259 IRQ Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/irq.c)
+* [PS2 Key Board Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/ps2.c)
+* [VGA Textmode Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/vga.c)
+* [8254 PIT Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/timer.c)
 
 ## MEME OS 3
 
