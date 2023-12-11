@@ -134,3 +134,5 @@ The meme project is a set of repositories to capture my progress and projects in
     * [ESP 32 Hello World and Build Env Set up](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/Init_PI_JTAG_Test.md#esp-32-set-up)
     * [OpenOCD Cheat Sheet](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/Init_PI_JTAG_Test.md#openocd-and-remote-debugging)
 * [Targeting an RPI4 via JTAG](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/RPI4_JTAG_Target.md)
+* [UART over GPIO Headers on the PI and ESP 32](https://github.com/tanner-johnson2718/PI_JTAG_DBGR#uart)
+* [SPI set up for PI and ESP 32](https://github.com/tanner-johnson2718/PI_JTAG_DBGR#spi)
