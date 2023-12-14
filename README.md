@@ -136,3 +136,4 @@ The meme project is a set of repositories to capture my progress and projects in
 * [Targeting an RPI4 via JTAG](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/RPI4_JTAG_Target.md)
 * [UART over GPIO Headers on the PI and ESP 32](https://github.com/tanner-johnson2718/PI_JTAG_DBGR#uart)
 * [SPI set up for PI and ESP 32](https://github.com/tanner-johnson2718/PI_JTAG_DBGR#spi)
+* [Using JTAG to reverse engineer an esp32](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/writeups/Reverse_Engineer_Example.md)
