@@ -9,7 +9,8 @@ The meme project is a set of repositories to capture my progress and projects in
 | [MEME OS 3](https://github.com/tanner-johnson2718/MEME_OS_3) | A report style project that covers linking, compilation, processes, some system call information, ELF format, etc.| Done :heavy_check_mark: |
 | [Crypto](https://github.com/tanner-johnson2718/Crypto) | Repo for exploring cryptography. Followed a set of challanges and used as guide for study. | Not really done but is wrapped up with what it has :heavy_check_mark: |
 | [Layer 1 and 2 Ethernet Lab](https://github.com/tanner-johnson2718/MEME_ETH_LAB) | Ethernet lab style project using an RPI 4. Focus on code, scripts and other "hands on" style deliverables. | Done but should come back and finish what is annoatated in the next section  |
-| [PI 4 JTAG Debugger](https://github.com/tanner-johnson2718/PI_JTAG_DBGR) | Run open OCD and use the rpi 4 as a JTAG debugger and programmer | In progress | 
+| [PI 4 JTAG Debugger](https://github.com/tanner-johnson2718/PI_JTAG_DBGR) | Run open OCD and use the rpi 4 as a JTAG debugger and programmer | In progress |
+| [ESP32 Deluminator](https://github.com/tanner-johnson2718/ESP32_Deluminator/tree/master) | Project using ESP32 to explore wifi and wifi based attacks | In Progress |
 
 # Up Next
 
@@ -137,3 +138,17 @@ The meme project is a set of repositories to capture my progress and projects in
 * [UART over GPIO Headers on the PI and ESP 32](https://github.com/tanner-johnson2718/PI_JTAG_DBGR#uart)
 * [SPI set up for PI and ESP 32](https://github.com/tanner-johnson2718/PI_JTAG_DBGR#spi)
 * [Using JTAG to reverse engineer an esp32](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/writeups/Reverse_Engineer_Example.md)
+
+## ESP32 Deluminator
+
+* [Wifi Attacks](https://github.com/tanner-johnson2718/ESP32_Deluminator/tree/master/Attacks)
+    * [WPA2 Deauth](https://github.com/tanner-johnson2718/ESP32_Deluminator/blob/master/Attacks/WPA2_Deauth.md)
+* [ESP32 Systems Exploration](https://github.com/tanner-johnson2718/ESP32_Deluminator/blob/master/esp32_sys_overview.md)
+    * [Flash Memory, Partition Table and SPIFFS](https://github.com/tanner-johnson2718/ESP32_Deluminator/blob/master/esp32_sys_overview.md#flash-memory)
+    * [Boot Process](https://github.com/tanner-johnson2718/ESP32_Deluminator/blob/master/esp32_sys_overview.md#early-start-up)
+    * [Event Model](https://github.com/tanner-johnson2718/ESP32_Deluminator/blob/master/esp32_sys_overview.md#early-start-up)
+* [ESP32 Modules](https://github.com/tanner-johnson2718/ESP32_Deluminator/tree/master/esp32_build)
+    * [LCD and Push Button interface](https://github.com/tanner-johnson2718/ESP32_Deluminator/blob/master/esp32_build/main/user_interface.c)
+    * [REPL Interface](https://github.com/tanner-johnson2718/ESP32_Deluminator/blob/master/esp32_build/main/repl.c)
+    * [Flash FS and NVS](https://github.com/tanner-johnson2718/ESP32_Deluminator/blob/master/esp32_build/main/flash_man.c)
+* [Wifi Protocols]
