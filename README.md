@@ -12,57 +12,22 @@ The meme project is a set of repositories to capture my progress and projects in
 | [PI 4 JTAG Debugger](https://github.com/tanner-johnson2718/PI_JTAG_DBGR) | Run open OCD and use the rpi 4 as a JTAG debugger and programmer | In progress |
 | [ESP32 Deluminator](https://github.com/tanner-johnson2718/ESP32_Deluminator/tree/master) | Project using ESP32 to explore wifi and wifi based attacks | In Progress |
 
-# Up Next
-
-* Wrapping Up Already Started
-    * MEME ETH
-        * Track a packet
-        * ARP
-
-* Planned Labs
-    * TCP/IP Lab
-    * Virt mem lab
-        * how a program is laid out in memory (including kernel stack, etc)
-    * File
-    * 802.11 wifi
-    * Buildroot v3
-    * Scheduler Lab
-
-* Other Embedded Topics
-    * device trees
-    * Linux start up
-        * Go line by line on boot and figure out what it all means
-    * boot loaders
-        * Specifically look at the PI or ESP32 boot loader
-        * PI sd card layout
-        * cmdlint.txt, config.txt, etc
-    * dma
-    * Whats all this shit running on my linux sys
-    * pci and usb
-    * container of
-    * offset of
-    * udev
-    * namespace
-    * signals
-    * linker script
-    * User accounts and perms
-
 # Index and Key Deliverables
 
-## MEME OS
+## [MEME OS](https://github.com/tanner-johnson2718/MEME_OS)
 
 * [Buildroot Doc and some Systems Textbooks](https://github.com/tanner-johnson2718/MEME_OS/tree/master/docs)
 * [Buildroot Example kmod](https://github.com/tanner-johnson2718/MEME_OS/tree/master/kernel-modules/hellomod), [Buildroot Example Userspace App](https://github.com/tanner-johnson2718/MEME_OS/tree/master/user-apps/hello), [Buildroot Helper Scripts](https://github.com/tanner-johnson2718/MEME_OS/tree/master/scripts).
 * [Some initial doc on buildroot](https://github.com/tanner-johnson2718/MEME_OS/tree/master#buildroot-and-linux-menuconfig)
 
-## MEME OS 2
+## [MEME OS 2](https://github.com/tanner-johnson2718/MEME_OS_2)
 
-* [8250 serial driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/serial.c)
-* [GDT Memory Segmentation](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/gdt.c)
-* [PIC 8259 IRQ Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/irq.c)
-* [PS2 Key Board Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/ps2.c)
-* [VGA Textmode Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/vga.c)
-* [8254 PIT Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/timer.c)
+* [8250 serial driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/serial.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/serial.h)
+* [GDT Memory Segmentation](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/gdt.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/gdt.h)
+* [PIC 8259 IRQ Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/irq.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/irq.h)
+* [PS2 Key Board Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/ps2.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/ps2.h)
+* [VGA Textmode Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/vga.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/vga.h)
+* [8254 PIT Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/timer.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/timer.h)
 
 ## MEME OS 3
 
