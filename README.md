@@ -74,7 +74,7 @@ The meme project is a set of repositories to capture my progress and projects in
 
 ## MEME ETH Lab
 
-* [Raw Sockets](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/external_packages/ethraw)
+* [Raw Sockets](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/extern_packages/ethraw)
 * [RPI Buildroot System](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/P2.2).
     * [Scripts Associated with RPI buildroot system](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/P2.2)
 * [Using Sysfs to find Network HW info](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/P2.1#using-sysfs-to-play-with-rpi-eth-devices)
