@@ -29,7 +29,7 @@ The meme project is a set of repositories to capture my progress and projects in
 * [VGA Textmode Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/vga.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/vga.h)
 * [8254 PIT Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/timer.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/timer.h)
 
-## [MEME OS 3]((https://github.com/tanner-johnson2718/MEME_OS_3))
+## [MEME OS 3](https://github.com/tanner-johnson2718/MEME_OS_3)
 
 * [GDB Cheat Sheet](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Appendix/GDB#my-gdb-cheat-sheet)
 * [Official ProcFS Doc](https://docs.kernel.org/filesystems/proc.html)
@@ -58,7 +58,7 @@ The meme project is a set of repositories to capture my progress and projects in
     * [task struct](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#linux-proc--task-structure)
 * [SysCall Doc](https://github.com/tanner-johnson2718/MEME_OS_3/blob/main/System_Calls/README.md#exercise-make-your-own-syscall)
 
-## MEME Crypto
+## [MEME Crypto](https://github.com/tanner-johnson2718/Crypto)
 
 * [Art of Computer Programming and Crypto Books](https://github.com/tanner-johnson2718/Crypto)
 * [AES](https://github.com/tanner-johnson2718/Crypto/tree/master/AES)
@@ -72,7 +72,7 @@ The meme project is a set of repositories to capture my progress and projects in
 * [Psedo RNG](https://github.com/tanner-johnson2718/Crypto/tree/master/prng)
 * [XOR Cipher](https://github.com/tanner-johnson2718/Crypto/tree/master/xor_cipher)
 
-## MEME ETH Lab
+## [MEME ETH Lab](https://github.com/tanner-johnson2718/MEME_ETH_LAB)
 
 * [Raw Sockets](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/extern_packages/ethraw)
 * [RPI Buildroot System](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/P2.2).
@@ -93,7 +93,7 @@ The meme project is a set of repositories to capture my progress and projects in
     * [Changing a MAC addr and Promiscious mode on a NIC](https://github.com/tanner-johnson2718/MEME_ETH_LAB/blob/master/P2.3/init_notes.md)
     * [VA to PA Sysfs based Kernel Module](https://github.com/tanner-johnson2718/MEME_ETH_LAB/tree/master/extern_packages/v2p)
 
-## RPI 4 JTAG Debugger
+## [RPI 4 JTAG Debugger](https://github.com/tanner-johnson2718/PI_JTAG_DBGR)
 
 * [Init Set up and getting a JTAG open on a ESP 32 using the Raspberry PI](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/Init_PI_JTAG_Test.md)
     * [PI JTAG Set up](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/Init_PI_JTAG_Test.md#init-pi-os-set-up)
@@ -104,7 +104,7 @@ The meme project is a set of repositories to capture my progress and projects in
 * [SPI set up for PI and ESP 32](https://github.com/tanner-johnson2718/PI_JTAG_DBGR#spi)
 * [Using JTAG to reverse engineer an esp32](https://github.com/tanner-johnson2718/PI_JTAG_DBGR/blob/master/writeups/Reverse_Engineer_Example.md)
 
-## ESP32 Deluminator
+## [ESP32 Deluminator](https://github.com/tanner-johnson2718/ESP32_Deluminator/tree/master)
 
 * [Wifi Attacks](https://github.com/tanner-johnson2718/ESP32_Deluminator/tree/master/Attacks)
     * [WPA2 Deauth](https://github.com/tanner-johnson2718/ESP32_Deluminator/blob/master/Attacks/WPA2_Deauth.md)
@@ -116,4 +116,3 @@ The meme project is a set of repositories to capture my progress and projects in
     * [LCD and Push Button interface](https://github.com/tanner-johnson2718/ESP32_Deluminator/blob/master/esp32_build/main/user_interface.c)
     * [REPL Interface](https://github.com/tanner-johnson2718/ESP32_Deluminator/blob/master/esp32_build/main/repl.c)
     * [Flash FS and NVS](https://github.com/tanner-johnson2718/ESP32_Deluminator/blob/master/esp32_build/main/flash_man.c)
-* [Wifi Protocols]
