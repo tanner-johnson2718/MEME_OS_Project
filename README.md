@@ -1,6 +1,6 @@
 # MEME Project
 
-The meme project is a set of repositories to capture my progress and projects in a self study of Embedded and Systems programming topics. This repo will act as indexer into the MEME repos that actually hold the content.
+The meme project is a set of repositories to capture my progress and projects in a self study of Embedded and Systems programming topics (i.e. for the lulz). This repo will act as indexer into the MEME repos that actually hold the content.
 
 | Project | Description | Status |
 | --- | --- | --- |
@@ -8,7 +8,7 @@ The meme project is a set of repositories to capture my progress and projects in
 | [MEME OS 2](./MEME_OS_2) | A bare bones, from scratch OS running on x86 Qemu. Purpose is to explore creating bare metal drivers and OS code, and to explore the hardware architecture of x86. | Done :heavy_check_mark: |
 | [MEME OS 3](./MEME_OS_3) | A report style project that covers linking, compilation, processes, some system call information, ELF format, etc.| Done :heavy_check_mark: |
 | [Crypto](https://github.com/tanner-johnson2718/Crypto) | Repo for exploring cryptography. Followed a set of challanges and used as guide for study. | Not really done but is wrapped up with what it has :heavy_check_mark: |
-| [Layer 1 and 2 Ethernet Lab](https://github.com/tanner-johnson2718/MEME_ETH_LAB) | Ethernet lab style project using an RPI 4. Focus on code, scripts and other "hands on" style deliverables. | Done :heavy_check_mark:  |
+| [Layer 1 and 2 Ethernet Lab](./MEME_ETH_LAB) | Ethernet lab style project using an RPI 4. Focus on code, scripts and other "hands on" style deliverables. | Done :heavy_check_mark:  |
 | [PI 4 JTAG Debugger](https://github.com/tanner-johnson2718/PI_JTAG_DBGR) | Run open OCD and use the rpi 4 as a JTAG debugger and programmer | Done :heavy_check_mark: |
 | [ESP32 Deluminator](https://github.com/tanner-johnson2718/ESP32_Deluminator/tree/master) | Project using ESP32 to explore wifi and wifi based attacks | Done :heavy_check_mark: |
 
