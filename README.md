@@ -5,7 +5,7 @@ The meme project is a set of repositories to capture my progress and projects in
 | Project | Description | Status |
 | --- | --- | --- |
 | [MEME OS 1](./MEME_OS) | First Stab at buildroot .A collection of scripts and example that build a linux kernel using Build Root targeting Qemu. Attached debugger to linux kernel. | Done :heavy_check_mark: |
-| [MEME OS 2](https://github.com/tanner-johnson2718/MEME_OS_2) | A bare bones, from scratch OS running on x86 Qemu. Purpose is to explore creating bare metal drivers and OS code, and to explore the hardware architecture of x86. | Done :heavy_check_mark: |
+| [MEME OS 2](./MEME_OS_2) | A bare bones, from scratch OS running on x86 Qemu. Purpose is to explore creating bare metal drivers and OS code, and to explore the hardware architecture of x86. | Done :heavy_check_mark: |
 | [MEME OS 3](https://github.com/tanner-johnson2718/MEME_OS_3) | A report style project that covers linking, compilation, processes, some system call information, ELF format, etc.| Done :heavy_check_mark: |
 | [Crypto](https://github.com/tanner-johnson2718/Crypto) | Repo for exploring cryptography. Followed a set of challanges and used as guide for study. | Not really done but is wrapped up with what it has :heavy_check_mark: |
 | [Layer 1 and 2 Ethernet Lab](https://github.com/tanner-johnson2718/MEME_ETH_LAB) | Ethernet lab style project using an RPI 4. Focus on code, scripts and other "hands on" style deliverables. | Done :heavy_check_mark:  |
@@ -20,43 +20,43 @@ The meme project is a set of repositories to capture my progress and projects in
 * [Buildroot Example kmod](./MEME_OS/kernel-modules/hellomod), [Buildroot Example Userspace App](./MEME_OS/user-apps/hello), [Buildroot Helper Scripts](./MEME_OS/tree/master/scripts).
 * [Some initial doc on buildroot](./MEME_OS/README.md#buildroot-and-linux-menuconfig)
 
-## [MEME OS 2](https://github.com/tanner-johnson2718/MEME_OS_2)
+## [MEME OS 2](./MEME_OS_2)
 
-* [8250 serial driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/serial.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/serial.h)
-* [GDT Memory Segmentation](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/gdt.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/gdt.h)
-* [PIC 8259 IRQ Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/irq.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/irq.h)
-* [PS2 Key Board Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/ps2.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/ps2.h)
-* [VGA Textmode Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/vga.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/vga.h)
-* [8254 PIT Driver](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/kernel/timer.c) and [header w/ doc](https://github.com/tanner-johnson2718/MEME_OS_2/blob/master/include/kernel/timer.h)
+* [8250 serial driver](./MEME_OS_2/kernel/serial.c) and [header w/ doc](./MEME_OS_2/include/kernel/serial.h)
+* [GDT Memory Segmentation](./MEME_OS_2/kernel/gdt.c) and [header w/ doc](./MEME_OS_2/include/kernel/gdt.h)
+* [PIC 8259 IRQ Driver](./MEME_OS_2/kernel/irq.c) and [header w/ doc](./MEME_OS_2/kernel/irq.h)
+* [PS2 Key Board Driver](./MEME_OS_2/kernel/ps2.c) and [header w/ doc](./MEME_OS_2/include/kernel/ps2.h)
+* [VGA Textmode Driver](./MEME_OS_2/kernel/vga.c) and [header w/ doc](./MEME_OS_2/include/kernel/vga.h)
+* [8254 PIT Driver](./MEME_OS_2/kernel/timer.c) and [header w/ doc](./MEME_OS_2/include/kernel/timer.h)
 
-## [MEME OS 3](https://github.com/tanner-johnson2718/MEME_OS_3)
+## [MEME OS 3](./MEME_OS_3)
 
-* [GDB Cheat Sheet](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Appendix/GDB#my-gdb-cheat-sheet)
+* [GDB Cheat Sheet](./MEME_OS_3/Appendix/GDB#my-gdb-cheat-sheet)
 * [Official ProcFS Doc](https://docs.kernel.org/filesystems/proc.html)
-* [Dynamic Linking](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Dynamic_Linking)
-    * [syscall instruction and calling conventions](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Dynamic_Linking#exercise-make-your-own-print-shared-library)
-    * [Creating a Dynamic Library (.so)](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Dynamic_Linking#exercise-make-your-own-print-shared-library)
-    * [Making Program w/o the C-stdlib](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Dynamic_Linking#exercise-make-your-own-print-shared-library)
-    * [PLT and GOT](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Dynamic_Linking#got-and-plt)
-    * [Lazy Binding](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Dynamic_Linking#lazy-binding)
-    * [VA to PA code](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Dynamic_Linking#physical-addresses-and-multiple-users)
+* [Dynamic Linking](./MEME_OS_3/Dynamic_Linking)
+    * [syscall instruction and calling conventions](./MEME_OS_3/Dynamic_Linking#exercise-make-your-own-print-shared-library)
+    * [Creating a Dynamic Library (.so)](./MEME_OS_3/Dynamic_Linking#exercise-make-your-own-print-shared-library)
+    * [Making Program w/o the C-stdlib](./MEME_OS_3/Dynamic_Linking#exercise-make-your-own-print-shared-library)
+    * [PLT and GOT](./MEME_OS_3/Dynamic_Linking#got-and-plt)
+    * [Lazy Binding](./MEME_OS_3/Dynamic_Linking#lazy-binding)
+    * [VA to PA code](./MEME_OS_3/Dynamic_Linking#physical-addresses-and-multiple-users)
     * `sudo awk '$NF!~/\.so/{next} {$0=$NF} !a[$0]++' /proc/*/maps` to dump all system dynamic libraries.
-* [ELF File Standard](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Hello_World#overview0)
-* [Static Linking](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Linking)
-    * [Compiler Symbols](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Linking#globals-locals-externs-functions-and-their-symbols)
-    * [Relocation and PIC](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Linking#relocation)
-    * [440 byte hello world](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Linking#exercise-create-a-minimal-hello-world)
-* [Dynamic Loader (ld)](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Loading)
-    * [Process Image and How cmd line args and env args are passed](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Loading#command-line-args-and-environment-variables)
-    * [LibC Program call graph](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Loading#libc-and-dynamic-linker-invocation)
-* [Attempt at making my own LibC](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/MEME_Lib)
-* [First Stab at diging into processes](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes)
-    * [Process State Machine](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#process-creation-manipulation-and-execution)
-    * [Group and Thread IDs](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#ids)
-    * [Clone](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#ids)
-    * [rusage](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#runtime-stats)
-    * [task struct](https://github.com/tanner-johnson2718/MEME_OS_3/tree/main/Processes#linux-proc--task-structure)
-* [SysCall Doc](https://github.com/tanner-johnson2718/MEME_OS_3/blob/main/System_Calls/README.md#exercise-make-your-own-syscall)
+* [ELF File Standard](./MEME_OS_3/Hello_World#overview0)
+* [Static Linking](./MEME_OS_3/Linking)
+    * [Compiler Symbols](./MEME_OS_3/Linking#globals-locals-externs-functions-and-their-symbols)
+    * [Relocation and PIC](./MEME_OS_3/Linking#relocation)
+    * [440 byte hello world](./MEME_OS_3/Linking#exercise-create-a-minimal-hello-world)
+* [Dynamic Loader (ld)](./MEME_OS_3/Loading)
+    * [Process Image and How cmd line args and env args are passed](./MEME_OS_3/Loading#command-line-args-and-environment-variables)
+    * [LibC Program call graph](./MEME_OS_3/Loading#libc-and-dynamic-linker-invocation)
+* [Attempt at making my own LibC](./MEME_OS_3/MEME_Lib)
+* [First Stab at diging into processes](./MEME_OS_3/Processes)
+    * [Process State Machine](./MEME_OS_3/Processes#process-creation-manipulation-and-execution)
+    * [Group and Thread IDs](./MEME_OS_3/Processes#ids)
+    * [Clone](./MEME_OS_3/Processes#ids)
+    * [rusage](./MEME_OS_3/Processes#runtime-stats)
+    * [task struct](./MEME_OS_3/Processes#linux-proc--task-structure)
+* [SysCall Doc](./MEME_OS_3/blob/main/System_Calls/README.md#exercise-make-your-own-syscall)
 
 ## [MEME Crypto](https://github.com/tanner-johnson2718/Crypto)
 
