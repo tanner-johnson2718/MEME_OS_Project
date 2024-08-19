@@ -1,0 +1,33 @@
+- Downloaded "AM3358 Debian 10.3 2020-04-06 4GB SD IoT" from 
+  https://beagleboard.org/latest-images
+- Flashed to micro sd, plugged into board, and booted image
+- Connected to WiFi end point named "BeagleBone-9947"
+- Password is BeagleBone
+- In browser go to hosted IDE at 192.168.8.1
+- This opens IDE / ssh session / debugger
+- Can also ssh debian@192.168.8.1
+- root pwd is temppwd
+- Connected to internet on board by:
+- connmanctl
+- scan wifi
+- services
+- agent on
+- connect wifi_XXXXXXXXXX_XXXXXXXXXX_managed_wps
+- enter wifi Password
+- quit
+- Should now see interface on wlan0 for outside internet
+- update / upgrade
+- sudo apt-get install cmake libjpeg62-turbo-dev
+- sudo apt-get install cmake gcc g++
+- git clone https://github.com/jacksonliam/mjpg-streamer
+- cd mjpg-streamer/mjpg-streamer-experimental
+- make
+- sudo make install
+- sudo mjpg_streamer -i "input_uvc.so -d /dev/video0" -o "output_http.so -p 8090 -w /usr/share/mjpg-streamer/www"
+- on host go to http://192.168.8.1:8090/ctlr.html
+- boom have wifi and streaming
+- ... Problem with servo controller
+- Update boot loader by modifying the file /boot/uEnv.txt
+- uncomment this line: "cmdline=init=/opt/scripts/tools/eMMC/init-eMMC-flasher-v3.sh"
+- restart the board and wait till all LEDs turn solid
+- take out micro SD and boom you have working servos
