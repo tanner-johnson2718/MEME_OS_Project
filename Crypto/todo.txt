@@ -1,0 +1,28 @@
+Public key cryptography)
+  - Diffie Helman
+  - RSA
+- Hashes
+    - MD5
+    - SHA256
+- Message Authentication codes
+- Certificate / Certificate Authority
+- Cookies?
+
+--------------------------------------------------------------
+
+PRNG)
+  - LFSR
+  - Mersenne Twister RNG
+  - Stat tests
+  - entropy
+
+AES)
+- AES Galois counter mode
+- What makes a block cipher good? What metrics?
+- If I were to start from first principals how would I arrive at AES?
+  - i.e. why is there all this rigormoral?
+  - Why do we need 10 rounds of all this shit?
+- Doc
+- Fix padding on challange 14
+- Doc attack + analysis form above qs
+- Go back over and re fac set 3 into AES + doc

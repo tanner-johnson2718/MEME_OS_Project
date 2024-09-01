@@ -1,0 +1,2276 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+TODO:
+\end_layout
+
+\begin_layout Itemize
+Fix and then produce PDF to archive this bitch off
+\end_layout
+
+\begin_layout Itemize
+Maybe a numerical simulation where forcce laws are used to run simulation.
+ Show that closed form analysis agrees with direct simulation using newtwons
+ laws
+\end_layout
+
+\begin_layout Section
+Motivation
+\end_layout
+
+\begin_layout Standard
+Simply consider two objects floating in space with respective masses and
+ known intial positions and velocities.
+ These two bodies follow Newtons Law of graviatation.
+ These will be our only assumptions (along with conservation of energy).
+ Specifically we start by defining the force between two point paritcles
+ in 3+1 flat euclian space with positions, velocities, and masses 
+\begin_inset Formula $x_{1}(t)$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}(t)$
+\end_inset
+
+, 
+\begin_inset Formula $\dot{x}_{1}(t)$
+\end_inset
+
+, 
+\begin_inset Formula $\dot{x}_{2}(t),M_{1},M_{2}$
+\end_inset
+
+.
+ Each particle exerts an equal and opposite force on each other along the
+ vector 
+\begin_inset Formula $r(t)$
+\end_inset
+
+ i.e.
+ the line connecting the two particles .
+ The force 
+\begin_inset Formula $F_{1}$
+\end_inset
+
+denotes the force of particle 2 on 1, and vice versa for 
+\begin_inset Formula $F_{1}$
+\end_inset
+
+ acts in the direction 
+\begin_inset Formula $r(t)$
+\end_inset
+
+ which we define as the vector pointing from 
+\begin_inset Formula $x_{2}(t)$
+\end_inset
+
+ to 
+\begin_inset Formula $x_{1}(t)$
+\end_inset
+
+ (note we also define 
+\begin_inset Formula $\hat{r}$
+\end_inset
+
+to denote the unit vector where as 
+\begin_inset Formula $r$
+\end_inset
+
+ encodes the distant between the two particles as well as the direction).
+ Formally,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+F_{1}=-G\frac{M_{1}M_{2}}{\Vert r(t)\Vert^{2}}\hat{r} & F_{2}=G\frac{M_{1}M_{2}}{\Vert r(t)\Vert^{2}}\hat{r}\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+r(t)=x_{1}(t)-x_{2}(t) & \hat{r}=\frac{x_{1}(t)-x_{2}(t)}{\Vert x_{1}(t)-x_{2}(t)\Vert}\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Applying netwons second law (
+\begin_inset Formula $F=m\ddot{x}$
+\end_inset
+
+) to this yields the following highly non linear ODE:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+\ddot{x}_{1}=-G\frac{M_{2}}{\Vert r(t)\Vert^{2}}\hat{r} & \ddot{x}_{2}=G\frac{M_{1}}{\Vert r(t)\Vert^{2}}\hat{r}\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To help visualize:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Vectors.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Center of Mass, Reduction to 1-D Problem, and Linear Momentum Conserved
+\end_layout
+
+\begin_layout Standard
+(3) Is very compact and intuitive but is highly non linear and does imediatly
+ suggest a solution.
+ So we know the center of mass is an important point in gravitation problems
+ so lets see the dynamics of the center of mass 
+\begin_inset Formula $x_{com}(t)$
+\end_inset
+
+.
+ By definition 
+\begin_inset Formula $x_{com}(t)=\frac{1}{M_{1}+M_{2}}(M_{1}x_{1}(t)+M_{2}x_{2}(t))$
+\end_inset
+
+.
+ Now simply differentiate twice with respect to time:
+\begin_inset Formula $\ddot{x}_{com}(t)=\frac{\Vert r(t)\Vert^{2}}{M_{1}+M_{2}}(F_{1}+F_{2})=0$
+\end_inset
+
+ since 
+\begin_inset Formula $F_{1}=-F_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Thus we can see that 
+\begin_inset Formula $x_{com}(t)$
+\end_inset
+
+ is non accelerating and thus is an interial frame and so we will continue
+ our analysis in this frame.
+ As a quick detour, this allows us to show that momentum is conserved.
+ To see this, consider that 
+\begin_inset Formula $\dot{x}_{com}(t)$
+\end_inset
+
+ is constant by the above reasoning.
+ Thus 
+\begin_inset Formula $\dot{x}_{com}(t)=\frac{1}{M_{1}+M_{2}}(p_{1}(t)+p_{2}(t))$
+\end_inset
+
+ is constant implying the total momentum is constant.
+ Now continuing, we can rewrite 
+\begin_inset Formula $x_{2}(t)$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}(t)$
+\end_inset
+
+ in terms of the center of mass.
+ Foreshadowing, lets define 
+\begin_inset Formula $\mu=\frac{M_{1}M_{2}}{M_{1}+M_{2}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{com}(t)=\frac{\mu}{M_{2}}x_{1}(t)+\frac{\mu}{M_{1}}x_{2}(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{1}(t)=\frac{\mu}{M_{2}}x_{1}(t)+\frac{\mu}{M_{1}}x_{2}(t)-\frac{\mu}{M_{1}}x_{2}(t)-(\frac{\mu}{M_{2}}-1)x_{1}(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x_{1}(t)=x_{com}(t)-(\frac{\mu}{M_{1}}x_{2}(t)+\frac{-M_{2}}{M_{1}+M_{2}}x_{1}(t))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally we get the following, where the posistion of particle 2 comes from
+ symmetry:
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+x_{1}(t)=x_{com}(t)+\frac{\mu}{M_{1}}r(t) & x_{2}(t)=x_{com}(t)-\frac{\mu}{M_{2}}r(t)\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Selecting the center of mass as our interial frame shows 
+\begin_inset Formula $x_{2}(t)$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{1}(t)$
+\end_inset
+
+ only depend on the vector defining their displacement 
+\begin_inset Formula $r(t)$
+\end_inset
+
+.
+ So what are the dynamics of 
+\begin_inset Formula $r(t)$
+\end_inset
+
+? Well first 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ddot{r}(t)=\ddot{x}_{1}(t)-\ddot{x}_{2}(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aplying (3)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ddot{r}=-G\frac{M_{2}}{\Vert r(t)\Vert^{2}}-G\frac{M_{1}}{\Vert r(t)\Vert^{2}}\hat{r}=-(M_{1}+M_{2})\frac{G}{\Vert r(t)\Vert^{2}}\hat{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A little maniputlation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{M_{1}M_{2}}{M_{1}+M_{2}}\ddot{r}=F_{1}=-G\frac{M_{1}M_{2}}{\Vert r(t)\Vert^{2}}\hat{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Cleaning up
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mu\ddot{r}=F_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So we see that our two particle system can be broken into a simplier one
+ body problem, whosw position is defined by 
+\begin_inset Formula $r(t)$
+\end_inset
+
+, with mass 
+\begin_inset Formula $\mu=\frac{M_{1}M_{2}}{M_{1}+M_{2}}$
+\end_inset
+
+, subject to a net force 
+\begin_inset Formula $F_{1}.$
+\end_inset
+
+ Note that 
+\begin_inset Formula $F_{1}$
+\end_inset
+
+points in the opposite direction of 
+\begin_inset Formula $r(t)$
+\end_inset
+
+, impling the force is trying to pull the bodies together as expected, but
+ the pull weakens as 
+\begin_inset Formula $r(t)$
+\end_inset
+
+ increases.
+ 
+\end_layout
+
+\begin_layout Section
+Angular Momentum is Conserved and Reduction to 2+1 Space
+\end_layout
+
+\begin_layout Standard
+Lets looks at the angular momentum of this 1 particle system.
+ 
+\begin_inset Formula $L=r\times p=r\times\mu\dot{r}.$
+\end_inset
+
+ Now simply take the time derivative this expression.
+ 
+\begin_inset Formula $\dot{L}=(\dot{r}\times\mu\dot{r})+(r\times\mu\ddot{r})$
+\end_inset
+
+.
+ Now the first term is 0, because the cross product of a vector and its
+ scalar multiple is zero.
+ Now the second term is just 
+\begin_inset Formula $r\times\mu\ddot{r}=r\times F_{1}$
+\end_inset
+
+.
+ These two vectors are anti parallel by defintion and this is 0.
+ This implies the rate at which angular momentum is changing is zero.
+ This implies angular momentum is constant.
+ So we let 
+\begin_inset Formula $L$
+\end_inset
+
+ be the intial and only angular momentum of this system.
+\end_layout
+
+\begin_layout Standard
+With angular momentum being conserved, we can find an interial frame where
+ are 1 particle system rotates in a 2D plane.
+ So from here on out we will assume that we are in that we are in that interial
+ frame and will assume the third component of our 3D system is 0.
+ So, 
+\begin_inset Formula $r(t)=r_{x}(t)\hat{i}+r_{y}(t)\hat{j}$
+\end_inset
+
+ in the 2D cartesian coordinate plane.
+\end_layout
+
+\begin_layout Section
+Energy and Polar Coordinates
+\end_layout
+
+\begin_layout Standard
+Now let us look at the energy of this, 2D 1 body problem.
+ The total energy is given by 
+\begin_inset Formula $E=K+U$
+\end_inset
+
+.
+ Where 
+\begin_inset Formula $K=\frac{1}{2}\mu\Vert\dot{r}\Vert^{2}$
+\end_inset
+
+ and 
+\begin_inset Formula $U=-G\frac{M_{1}M_{2}}{\Vert r(t)\Vert}$
+\end_inset
+
+.
+ So before continuing let us define polar cordinates.
+ 
+\begin_inset Formula $r_{y}(t)=R(t)\sin(\theta(t))$
+\end_inset
+
+ and 
+\begin_inset Formula $r_{x}=R(t)\cos(\theta(t))$
+\end_inset
+
+.
+ This is motivated by the fact that our problem now exists in the catesian
+ plane, and we know that these equations describe graviataion and thus usually
+ exhibit an orbitting behavior.
+ So 
+\begin_inset Formula $U(R)=-G\frac{M_{1}M_{2}}{R}$
+\end_inset
+
+.
+ Now finding the kinetic energy is a bit more complicated, but we have the
+ following transformation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dot{r}_{x}=\dot{R}\cos(\theta)-R\sin(\theta)\dot{\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\dot{r}_{y}=\dot{R}\sin(\theta)+R\cos(\theta)\dot{\theta}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So we already have our potentail energy in terms of our new polar coordinate
+ variables, 
+\begin_inset Formula $(R,\theta)$
+\end_inset
+
+.
+ Now let us find an expression in these coordinates for our kinetic energy.
+ We know 
+\begin_inset Formula $K=\frac{1}{2}\mu(\dot{r}_{x}^{2}+\dot{r}_{y}^{2})$
+\end_inset
+
+.
+ We can plug our transformation from above into this expression and one
+ gets:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K=\frac{1}{2}\mu(\dot{R}^{2}+R^{2}\dot{\theta}^{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+However we can simplify this further.
+ Since we know that angular momentum is constant, we can rewrite the angular
+ velocity term above using this constant.
+ We know 
+\begin_inset Formula $L=I\dot{\theta}$
+\end_inset
+
+ where 
+\begin_inset Formula $I=\mu R^{2}$
+\end_inset
+
+ is the moment of inertia.
+ Solving this for the angular velocity leads to 
+\begin_inset Formula $w=\dot{\theta}=\frac{L}{\mu R^{2}}$
+\end_inset
+
+ .
+ Pluging this into kinetic energy gives: 
+\begin_inset Formula $K=\frac{1}{2}\mu\dot{R}^{2}+\frac{L^{2}}{2\mu R^{2}}$
+\end_inset
+
+.
+ So we get an expression for the total energy of this system 
+\begin_inset Formula $E=K+U$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E=\frac{1}{2}\mu\dot{R}^{2}+\frac{L^{2}}{2\mu R^{2}}-G\frac{M_{1}M_{2}}{R}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the next section we show how to solve this using conservation of energy.
+\end_layout
+
+\begin_layout Section
+Solution
+\end_layout
+
+\begin_layout Standard
+To solve (5) we must assume that energy is conserved and thus total energy
+ 
+\begin_inset Formula $E$
+\end_inset
+
+ is constant.
+ It would nice to derive this from the defintion of the forces acting our
+ system, and it possibly falls out from the fact that the force is conservative,
+ but its simply easier to assume its conserved and move on.
+ So we take the time derivative of (5) and get the following differential
+ equations (we also include the dynamics of the angular velocity as the
+ below will now fully describe the time depedant dynamics of our system):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\begin{cases}
+\frac{dE}{dt}=\mu\ddot{R}-\frac{L^{2}}{\mu R^{3}}+G\frac{M_{1}M_{2}}{R^{2}}=0 & w=\dot{\theta}=\frac{l}{\mu R^{2}}\end{cases}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is a system of non-linear second order differential equationa and thus
+ we will need to play with it a bit to solve it.
+ The above is a time depedant equation, i.e.
+ 
+\begin_inset Formula $R=R(t)$
+\end_inset
+
+.
+ We can simplyify the above by using the angular velocity to find a single
+ time indepandt differential equation.
+ So, we can do a change of variables as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\theta}{dt}=\frac{L}{\mu R^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dR}{dt}=\frac{dR}{d\theta}\frac{d\theta}{dt}=\frac{dR}{d\theta}\frac{L}{\mu R^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}R}{dt^{2}}=(\frac{d}{dt}\frac{dR}{d\theta})\frac{d\theta}{dt}+\frac{dR}{d\theta}(\frac{d^{2}\theta}{dt^{2}})=(\frac{d^{2}R}{d\theta^{2}})(\frac{L}{\mu R^{2}})^{2}+(\frac{dR}{d\theta})^{2}\frac{-2L}{\mu R^{3}}\frac{L}{\mu R^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we can subsitute in the above into (6) giving us a time indepedant different
+ial equation describing our system
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d^{2}R}{d\theta^{2}}\frac{1}{R^{2}}-(\frac{dR}{d\theta})^{2}\frac{2}{R^{3}}-\frac{1}{R}+\mu\frac{GM_{1}M_{2}}{L^{2}}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now lets try the subsitution 
+\begin_inset Formula $R=\frac{1}{u}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{dR}{d\theta}=-\frac{1}{u^{2}}\frac{du}{d\theta}$
+\end_inset
+
+ and 
+\begin_inset Formula $\frac{d^{2}R}{d\theta^{2}}=\frac{2}{u^{3}}\frac{du}{d\theta}-\frac{1}{u^{2}}\frac{d^{2}u}{d\theta^{2}}$
+\end_inset
+
+ .
+ Plugging this subsittion into our time indepedant equation gives:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}u}{d\theta^{2}}=\mu\frac{GM_{1}M_{2}}{L^{2}}-u
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can easily solve this.
+ To make that apparent we let 
+\begin_inset Formula $v=u-\mu\frac{GM_{1}M_{2}}{L^{2}}$
+\end_inset
+
+.
+ Which gives
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}v}{d\theta^{2}}=-v
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This has solutions 
+\begin_inset Formula $v=c_{1}\sin(\theta)+c_{2}\cos(\theta)$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $u=\frac{1}{R}=c_{1}\sin(\theta)+c_{2}\cos(\theta)+\mu\frac{GM_{1}M_{2}}{L^{2}}$
+\end_inset
+
+.
+ Now we can choose our coordinates so that the sin term goes away.
+ This yields the following explicit soltion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+R=\frac{L^{2}}{\mu GM_{1}M_{2}}\frac{1}{1+e\cos(\theta)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Keep in mind we still have have the following relation 
+\begin_inset Formula $w=\dot{\theta}=\frac{L}{\mu R^{2}}$
+\end_inset
+
+ which allows us to convert from the angular domain to the time domain.
+ But as we can see from (8) the general geometry of the solution is that
+ off conic sections.
+ Thus the possible set of solutions is a cirlce, ellipse, parabola, or hyberbola
+ (and possibly others).
+ For a given set of initial conditions, determining which set the dynamics
+ fall into is simply a matter of finding the constant 
+\begin_inset Formula $e$
+\end_inset
+
+ in (8).
+ Now we can plug the radius above into the formulas for Kinetic Energy,
+ Total energy, and angular velocity so that we have a set of equations that
+ sufficently describe the dynamics of our two body and reduced 1 body system.
+ These are:
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Radial:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R=\frac{L^{2}}{\mu GM_{1}M_{2}}\frac{1}{1+e\cos(\theta)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Energy:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+K=\frac{1}{2}\mu\dot{R}^{2}+\frac{L^{2}}{2\mu R^{2}}=\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{2L^{2}}(e^{2}+1+2e\cos(\theta))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E=K+U=\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{L^{2}}(\frac{e^{2}-1}{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Angular:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+w=\frac{L}{\mu R^{2}}=\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{L^{3}}(1+e\cos(\theta))^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Time:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+t(\theta)=\frac{L^{3}}{\mu G^{2}M_{1}^{2}M_{2}^{2}}\intop_{0}^{\theta}\frac{ds}{(1+e\cos(s))^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The above fully describe the dynamics of our system.
+ For a given angle we can describe the radius, angular velocity, and kinetic
+ energy.
+ If one is interested in answering questions such as how long it takes to
+ do X or at what point will X happen, then one can use numeric integration
+ to calculate how long it takes to sweep a certain angle and use the other
+ formulas to compute the desired quantity.
+ The total energy, and thus the eccentricity of the orbit is determined
+ by the initial conditions.
+ As well as the angular momentum.
+\end_layout
+
+\begin_layout Section
+Characterization of Solutions
+\end_layout
+
+\begin_layout Standard
+In this section we further analyze the dyamics of the solution found in
+ the previous section.
+ We use the energy, the geometric shape of the orbit, and other parameters
+ to investigate the physical reality of the initial two body problem.
+\end_layout
+
+\begin_layout Subsection
+Calculating Eccentricity
+\end_layout
+
+\begin_layout Standard
+Just use the above relation for total energy.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+e=\sqrt{1+\frac{2EL^{2}}{\mu G^{2}M_{1}^{2}M_{2}^{2}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The above has a 
+\begin_inset Quotes eld
+\end_inset
+
+phase
+\begin_inset Quotes erd
+\end_inset
+
+ transistion at the following values, inspired by the fact that this value
+ describes the eccentricity of our orbit:
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $E=-\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{2L^{2}}$
+\end_inset
+
+ , then 
+\begin_inset Formula $e=0$
+\end_inset
+
+.
+ So circle.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $E>-\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{2L^{2}},$
+\end_inset
+
+but 
+\begin_inset Formula $E<0$
+\end_inset
+
+ , then 
+\begin_inset Formula $0<e<1$
+\end_inset
+
+.
+ So ellipse.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $E>0$
+\end_inset
+
+, then 
+\begin_inset Formula $e>1$
+\end_inset
+
+.
+ So hyperbola.
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $E<-\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{2L^{2}}$
+\end_inset
+
+ , then 
+\begin_inset Formula $e$
+\end_inset
+
+ is imagnary?? Predict this is the case where one body falls into the other.
+\end_layout
+
+\begin_layout Subsection
+Breaking it down by case
+\end_layout
+
+\begin_layout Standard
+We found our solution for the reduced 1-body problem and observe there are
+ several cases based on the initial conditions.
+ Thus we break down these cases and charactize the resulting solution in
+ each case.
+ Our initial conditions allow us to use the masses, relative initial positions
+ i.e.
+ 
+\begin_inset Formula $r(0)$
+\end_inset
+
+, and relative intial velocites.
+ From these we can compute the conserved quantites such as total energy
+ and angular momentum, which we tabulate below as a reminder of what can
+ be taken as given.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Initial Condtions
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value (2-Body)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Value (Reduced 1-Body)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mass
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $M_{1},M_{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mu=\frac{M_{1}M_{2}}{M_{1}+M_{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Position
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $x_{1}(0)$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}(0)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $r(0)=x_{1}(0)-x_{2}(0)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Angular Momentum
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\mu$
+\end_inset
+
+
+\begin_inset Formula $(r(0)\times v_{1}(0)-v_{2}(0))$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $L=r(0)\times\mu(v_{1}(0)-v_{2}(0))$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total Energy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{2}M_{1}v_{1}^{2}(0)+\frac{1}{2}M_{2}v_{2}^{2}(0)-\frac{GM_{1}M_{2}}{\Vert x_{1}(0)-x_{2}(0)\Vert}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{1}{2}\mu\Vert v_{1}(0)-v_{2}(0)\Vert^{2}-\frac{GM_{1}M_{2}}{r(0)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the analysis that follows we consider only the 1 - body problem and treat
+ the solutions as describing a single body subject to an external force
+ which yields closed orbits in some cases and the single particle just flying
+ off to infinity in others.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Circle
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Paramters (Reduced 1-Body)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Solution
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Eccentricity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e=0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Radius
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R=\frac{L^{2}}{\mu GM_{1}M_{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Angular Velocity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w=\dot{\theta}=\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{L^{3}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Angular Position
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta=\dot{\theta}t$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Angular Domain
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta\epsilon\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Period of Orbit
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T=\frac{2\pi L^{3}}{\mu G^{2}M_{1}^{2}M_{2}^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kinetic Energy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $K=\frac{1}{2}\mu\frac{G^{2}M_{1}^{2}M_{2}^{2}}{L^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Potential Energy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $U=-\frac{GM_{1}M_{2}}{R}=-\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{L^{2}}=-2K$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total Energy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E=K+U=-K$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The case of the circle is very easy to analyze as it is just uniform circle
+ motion.
+ The key take away here is that the defining dynamics are such that potential
+ energy and kinetic energy do no depend on time and thus do not trade off.
+ This implies the defining inital conditions that lead to the case of a
+ circular orbit are those such that the overall kinetic energy of the motion
+ of the particle is exactly half the magnitude of the gravitational potential
+ energy.
+ The particle will then orbit the origin with constant radius, contant angular
+ velocity, and constant kinetic energy i.e.
+ uniform circular motion.
+ Thus, as shown in the above table, we can simplify the general formulas
+ into time and angle indepedant ones.
+ Moreover, we can compute the period of this orbit rather simply, and its
+ value is again shown above.
+ Finally we note that the values the angle can take on are not limited and
+ can be any real number.
+\end_layout
+
+\begin_layout Subsubsection
+Ellipese
+\end_layout
+
+\begin_layout Standard
+The ellipse's dynamics are more complicated than that of the circle, obviously.
+ More specifically, the dynamic of the radius, angular velocity, energy,
+ etc.
+ now vary according to the general formulas given in the previous section.
+ However, we can characterize the intial conditions that lead to this orbit.
+ Moreover, given the geometry of the orbit, we know there are points at
+ which the paramters (i.e.
+ radius) are at extremes and we can calcualate these extremal values as
+ well as where they occur in the orbit.
+ Below we plot the general form of the radius, angular velocity, and kinetic
+ energy as a function of the angular position.
+ Note that we do not scale the graphs in accordance to some choosen initial
+ conditions, it is simply the form of the general solutions given in the
+ previous section with a few choosen eccentricity parameters less than 1.
+ We also plot the elliptical orbit associated with each radius / velocity
+ / energy curve shown.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename elliptical_plots.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Elliptical_Orbits.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So the orbit, radius, angular velocity, and energy are fairly well described
+ by the general formulas and the above graphs.
+ We can see that at 
+\begin_inset Formula $\theta=0$
+\end_inset
+
+, the radius is at its mininum and its kinetic energy is at its max.
+ This flips at 
+\begin_inset Formula $\theta=\pi$
+\end_inset
+
+.
+ So in the reduced 1-body system, when the object to closest to the orgin
+ its moving fast.
+ It gets kicked away from the orgin, slowing down.
+ It then accelerates towards back towards the orgin until it reaches its
+ closest point, maximum kinetic energy, and the cycle repeats.
+ We can see this orbit is, obviously an ellipse, is stable and closed.
+ Thus our angle can take on value.
+ Finally, this orbit is predicted by having energy greater than that of
+ the circular orbit, but less than 0.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Paramters (Reduced 1-Body)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Solution
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Eccentricity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0<e<1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Radius
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{max}=\frac{L^{2}}{\mu GM_{1}M_{2}}\frac{1}{1-e}$
+\end_inset
+
+ ,
+\begin_inset Formula $R_{min}=\frac{L^{2}}{\mu GM_{1}M_{2}}\frac{1}{1+e}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Angular Velocity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w_{min}=\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{L^{3}}(1-e)^{2}$
+\end_inset
+
+ , 
+\begin_inset Formula $w_{max}=\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{L^{3}}(1+e)^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Angular Domain
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta\epsilon\mathbb{R}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kinetic Energy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+K_{min}=\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{2L^{2}}(1-e)^{2},
+\]
+
+\end_inset
+
+
+\begin_inset Formula $K_{max}=\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{2L^{2}}(1+e)^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total Energy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E<0$
+\end_inset
+
+, such that 
+\begin_inset Formula $E\rightarrow0$
+\end_inset
+
+ as 
+\begin_inset Formula $e\rightarrow1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Non Capturing Orbits (Parabola / Hyperbola)
+\end_layout
+
+\begin_layout Standard
+Predicted by positive total energy.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Orbit: 
+\series default
+Now the orbit in this case is a hyperbola or parabola.
+ Thus we can expect that the mass starts and some position and as time progresse
+s, 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+.
+ This orbit is not periodic and thus it does not make sense to talk about
+ a period.
+ None the less, we can still talk about the minimum radius and mininum kinetic
+ energy.
+ We can also talk about the angular velocity and position and their extrema,
+ and we can also limit the values of the angular position that makes sense,
+ since its not periodic it doesn't make sense to allow our angle to take
+ any value.
+ And we can talk about what happens as the radius goes to infinity and the
+ resulting dynamics.
+ Thus this orbit is described by a point closest to the body followed by
+ the object drifting away to infinity.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Radius: 
+\series default
+From the general formula, in the hyperbolic case, we see two interesting
+ points.
+ The first is the mininum radius at 
+\begin_inset Formula $\theta=0$
+\end_inset
+
+ where 
+\begin_inset Formula $R_{min}=\frac{L^{2}}{\mu GM_{1}M_{2}}\frac{1}{1+e}$
+\end_inset
+
+.
+ The next is the point where 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+ which happens as 
+\begin_inset Formula $\theta\rightarrow\arccos(-1/e)$
+\end_inset
+
+.
+ Due to even symetry of the cosine function, 
+\begin_inset Formula $R\rightarrow-\infty$
+\end_inset
+
+ which happens as 
+\begin_inset Formula $\theta\rightarrow-\arccos(-1/e)$
+\end_inset
+
+.
+ As an exmple if 
+\begin_inset Formula $e=1$
+\end_inset
+
+, then 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+ as 
+\begin_inset Formula $\theta\rightarrow\pi$
+\end_inset
+
+.
+ But if 
+\begin_inset Formula $e=2$
+\end_inset
+
+, then 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+ as 
+\begin_inset Formula $\theta\rightarrow2\pi/3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Angular: 
+\series default
+So from the above, we can conclude that we must limit our angualar positions
+ to the interval 
+\begin_inset Formula $(-\arccos(-1/e),\arccos(-1/e))$
+\end_inset
+
+.
+ We can also say the following.
+ The angular velocity is maxed at 
+\begin_inset Formula $\theta=0$
+\end_inset
+
+ with 
+\begin_inset Formula $w_{max}=\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{L^{3}}(1+e)^{2}$
+\end_inset
+
+.
+ And as 
+\begin_inset Formula $\theta\rightarrow\pm\arccos(-1/e)$
+\end_inset
+
+, then angular velocity is minimized, with 
+\begin_inset Formula $w\rightarrow0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Energy: 
+\series default
+The energy is perhaps the easiest to analyze.
+ As the 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+, 
+\begin_inset Formula $U\rightarrow0$
+\end_inset
+
+, and thus we can say that kinetic energy is minned as 
+\begin_inset Formula $R\rightarrow\infty$
+\end_inset
+
+ with the limiting energy simply being the total conserved energy, 
+\begin_inset Formula $K\rightarrow E=(e^{2}-1)\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{2L^{2}}$
+\end_inset
+
+.
+ Likewise, the kinetic energy is maxed at the minimum radius or 0 angle
+ and this max kinetic energy is 
+\begin_inset Formula $K_{max}=\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{2L^{2}}(1+e)^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename hyper_plots.png
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename hyper_orbits.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Paramters (Reduced 1-Body)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Solution
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Eccentricity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $e>1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Radius
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $R_{max}=\infty$
+\end_inset
+
+ ,
+\begin_inset Formula $R_{min}=\frac{L^{2}}{\mu GM_{1}M_{2}}\frac{1}{1+e}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Angular Velocity
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w_{min}=0$
+\end_inset
+
+ , 
+\begin_inset Formula $w_{max}=\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{L^{3}}(1+e)^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Angular Domain
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\theta\epsilon(-\arctan(-1/e),\arctan(-1/e))$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Kinetic Energy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+K_{min}=E,
+\]
+
+\end_inset
+
+
+\begin_inset Formula $K_{max}=\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{2L^{2}}(1+e)^{2}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Total Energy
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $E=(e^{2}-1)\frac{\mu G^{2}M_{1}^{2}M_{2}^{2}}{2L^{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Falling Orbits
+\end_layout
+
+\begin_layout Standard
+Predicted by energy less than that of the circle.
+ Hypothesis is that this is a degenerate case that only happens if 
+\begin_inset Formula $L=0$
+\end_inset
+
+.
+ Equivalently, this would only happen if the initial velocities both lie
+ on the line connecting the two bodies.
+ This can be reasoned using conservation of angular momentum.
+ If it has angualar momentum, it must keep it.
+ Thus the two bodies can never lie on path that intersects (given their
+ point particles).
+ Could try to prove this further, but that reasoning feels right.
+ 
+\end_layout
+
+\begin_layout Section
+Application and Verification
+\end_layout
+
+\begin_layout Standard
+Have two body numerical simulation in this directory, TB_num_sym.py.
+ Given initial conditions it simulates Newton's laws of gravitation and
+ saves off the data.
+ It then plots an animation showing the path of the two bodies through space
+ and prints the conserved quantities to verify their conserved.
+ The following can be verified using this simulator:
+\end_layout
+
+\begin_layout Itemize
+Total energy and angular momentum are conserved
+\end_layout
+
+\begin_layout Itemize
+Classification of orbit based on total energy
+\end_layout
+
+\begin_layout Itemize
+Period of elliptical orbits
+\end_layout
+
+\begin_layout Itemize
+Formulas for total energy, min/max kinetic energy, eccentricity, min/max
+ radius, and min/max angular velocity hold
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Note the prediction of eccentricity works in the elliptical case works,
+ but for the hyperbolic case it does not give correct value.
+ Will not investigate as I calculated eccentricity in a wonky manner.
+\end_layout
+
+\begin_layout Itemize
+All other values are accurately predicted though
+\end_layout
+
+\end_deeper
+\begin_layout Section
+What's Next
+\end_layout
+
+\begin_layout Itemize
+Langranian Mechanics.
+ How we solved this problem is a classic example of how and why the Langrange
+ formulation of classic mechanics is used.
+ Thus a further investigation of this topic is warranted.
+\end_layout
+
+\begin_layout Itemize
+3 Body Problem.
+ We solved the general 2-body case.
+ What about 3? Its not analytically solvable, but tricks exist.
+\end_layout
+
+\begin_layout Itemize
+N-body problem.
+ What about for N-bodies?
+\end_layout
+
+\begin_layout Itemize
+Langrange Points.
+ Stable 3-body configurations.
+\end_layout
+
+\begin_layout Itemize
+Linear Algebra / Matrix formulation of system of diff eq.
+\end_layout
+
+\begin_layout Itemize
+Newton's shell theorem
+\end_layout
+
+\begin_layout Itemize
+LRL vector?
+\end_layout
+
+\begin_layout Itemize
+Eccentricty vector
+\end_layout
+
+\end_body
+\end_document

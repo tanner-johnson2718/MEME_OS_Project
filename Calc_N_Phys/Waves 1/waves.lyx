@@ -1,0 +1,941 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Basic Waves
+\end_layout
+
+\begin_layout Standard
+Consider taught string that is locked in place on one side and you are holding
+ the other end.You jerk it up and back to its orginal position.
+ This produces a pulse.
+ Your jerking the string up raises the next sction of string which raises
+ the next section and so on.
+ While you jerking it back down produces the same affect momentarly delayed
+ from the moving up.
+ This creates a moving pulse that traversese the length of the string.
+ This is a 
+\series bold
+transverse 
+\series default
+because the direction of oscilation is perpendicular to the direction of
+ travel.
+ Like wise, consider a long cylinder of air with a piston on one end.
+ As you drive the piston you create pulses of high and low pressure just
+ as in the previous example.
+ This is a 
+\series bold
+longitudinal
+\series default
+ wave because the direction of travel is parallel to the direction of the
+ oscilation.
+ Both are said to be 
+\series bold
+traveling
+\series default
+ because the wave form moves through the medium.
+ The mathematics of a traveling wave are given below.
+\end_layout
+
+\begin_layout Itemize
+Displacement) 
+\begin_inset Formula $y(x,t)=h(kx\pm wt)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Wave form) 
+\begin_inset Formula $h(s)$
+\end_inset
+
+.
+ So the wave form is just how you drive the wave at 
+\begin_inset Formula $x=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Speed of wave) 
+\begin_inset Formula $v=\pm\frac{w}{k}$
+\end_inset
+
+.
+ Consider some point of constant displacement on the wave.
+ Now this implies 
+\begin_inset Formula $kx\pm wt$
+\end_inset
+
+ is constant.
+ Taking a differential gives 
+\begin_inset Formula $kdx\pm wdt=0$
+\end_inset
+
+.
+ Solving for 
+\begin_inset Formula $dx/dt$
+\end_inset
+
+ gives the speed 
+\begin_inset Formula $v$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dimension
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Angular Frequency
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Units
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Period / Wave length
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Time
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $w$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[s^{-1}]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $T=\frac{2\pi}{w}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Space
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $k$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $[m^{-1}]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\lambda=\frac{2\pi}{k}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The temporal frequency is determined by the force that is driving the wave,
+ while the spatial frequency is determined by the medium
+\end_layout
+
+\begin_layout Itemize
+Using a very hand wavy derivation one can show the speed at which a wave
+ propegates through a string with linear density 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is given by 
+\begin_inset Formula $v=\sqrt{\frac{\tau}{\mu}}$
+\end_inset
+
+, where 
+\begin_inset Formula $\tau$
+\end_inset
+
+ is the tension in the wire.
+ Thus using 
+\begin_inset Formula $v=(1/k)w$
+\end_inset
+
+ we can see that the spatial frequency is set by the medium since the speed
+ is set by the medium.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Confusion:
+\end_layout
+
+\begin_layout Itemize
+Why is it 
+\begin_inset Formula $kx-wt$
+\end_inset
+
+, still confused on that, but logic of following a point on the wave is
+ the same as saying 
+\begin_inset Formula $kx\pm wt$
+\end_inset
+
+ is constant makes sense.
+ Looking at a differential makes sense.
+ And the resulting velocity being the temporal frequency divided by the
+ spatial frequency makes sense.
+ So if you run that logic backwards one would arrive at 
+\begin_inset Formula $kx-wt$
+\end_inset
+
+ for the argument for the waveform.
+ 
+\end_layout
+
+\begin_layout Itemize
+If you drive wave with a non sine wave wave form, what do the temporal and
+ spatial frequencies mean?
+\end_layout
+
+\begin_layout Itemize
+How to determine the speed at which a wave goes through a medium without
+ using the stupid derivation used in the book? i.e.
+ find a better derivation
+\end_layout
+
+\begin_layout Itemize
+What the hell is the spatial frequency intuitively.
+ Radians per per meters, what does that mean.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Code:
+\end_layout
+
+\begin_layout Itemize
+wave.py just allows you to play with wave form, frequency, etc.
+\end_layout
+
+\begin_layout Section
+
+\series bold
+Energy
+\end_layout
+
+\begin_layout Standard
+You drive the LHS of the string with SHM.
+ You could imagine that as you pull up from 
+\begin_inset Formula $y=0$
+\end_inset
+
+ this would not only stretch the string, maximally, but would also be the
+ point where the string is moving the most.
+ Moreover, at exactly 
+\begin_inset Formula $y=y_{m}$
+\end_inset
+
+ you could imagine that you are no longer stretching the string and at exactly
+ that point there is no kinetic energy i.e.
+ a single particle at the peak of its SHM would be motionless.
+ This reasoning about the kinetic energy follows from the same reasoning
+ while analyzing SHM.
+ You could then intuitvly reason about the stretching by saying that well
+ if the string's not moving its not being stretched, so the Energy associated
+ with its motion must track with the energy placed into the elastic potential
+ energy of the string i.e.
+ its stretching.
+ Formally, consider a small string element of mass 
+\begin_inset Formula $dm$
+\end_inset
+
+ over a section 
+\begin_inset Formula $dx$
+\end_inset
+
+.
+ Now consider the differential slice of the KE associated with its transverse
+ (up and down) motion.
+ Remember we are driving the wave with SHM so it is a sine wave.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dK=.5dm(\frac{\partial y}{\partial t})^{2}=.5(\mu dx)y_{m}^{2}w^{2}\cos^{2}(kx-wt)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now as you might have guessed, divide both sides by a small time differential
+ to get a rate at which kinetic energy is transfered.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dK}{dt}=.5\mu vy_{m}^{2}w^{2}\cos^{2}(kx-wt)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Taking the average yields one half of the above because the average over
+ the square cosine is one half.
+ However we wish to analzye the total energy transfer which would include
+ the elastic potential energy.
+ But since we are driving this wave with SHM, we know that the average potential
+ energy equals that of the kinetic as over time, kinetic and potential average
+ to exactly half that of the total energy in SHM.
+ Thus the rate at which total energy is transferred and the thus the average
+ power is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+P_{avg}=.5\mu vy_{m}^{2}w^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Questions:
+\end_layout
+
+\begin_layout Itemize
+Could you calculate the elastic potential energy?
+\end_layout
+
+\begin_layout Itemize
+This would give how much it is being stretched, right?
+\end_layout
+
+\begin_layout Standard
+Well let us see if we can do that.
+ First consider a section 
+\begin_inset Formula $dx$
+\end_inset
+
+.
+ The length of the rope over this section is given by 
+\begin_inset Formula $dl^{2}=dx^{2}+dy^{2}$
+\end_inset
+
+.
+ Now there is some tension 
+\begin_inset Formula $T$
+\end_inset
+
+ in the rope producing this stretch.
+ Now potential is given by
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dU=.5k(dl-dx)^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can ignore the cross term of the square and write
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dU=.5kdy^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Code:
+\end_layout
+
+\begin_layout Itemize
+elastic.py simulates a rope as a series of point masses connected via springs.
+ Can set init speed and velocity of masses.
+ Results show that 
+\begin_inset Formula $F_{y}=-kdy$
+\end_inset
+
+ and 
+\begin_inset Formula $U=.5kdy^{2}$
+\end_inset
+
+are the correct forms of force and potential and they lead to conservation
+ of energy.
+ 
+\end_layout
+
+\begin_layout Section
+Deriving the 1D Wave Equation
+\end_layout
+
+\begin_layout Standard
+First just accept that 
+\begin_inset Formula $v^{2}=\frac{T}{\mu}$
+\end_inset
+
+ where 
+\begin_inset Formula $T$
+\end_inset
+
+ is the tension in the string and 
+\begin_inset Formula $\mu$
+\end_inset
+
+ is the linear density.
+ Moving on, consider a small slice of string 
+\begin_inset Formula $dx$
+\end_inset
+
+ with mass 
+\begin_inset Formula $dm=\mu dx$
+\end_inset
+
+, at the point 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Now there is some constant tension 
+\begin_inset Formula $T$
+\end_inset
+
+ in this string that acts tangent to the string at all times.
+ Now consider this tension at the point 
+\begin_inset Formula $x$
+\end_inset
+
+ and at the point 
+\begin_inset Formula $x+dx$
+\end_inset
+
+.
+ As the wave passes through the point 
+\begin_inset Formula $x$
+\end_inset
+
+, it increases or decreases the slope of the tangent line at that point,
+ causing a slight difference in the tension.
+ Thus the acceleration upward or downward that our slice feels is just the
+ net difference of the tension at 
+\begin_inset Formula $x$
+\end_inset
+
+ with the tension at 
+\begin_inset Formula $x+dx$
+\end_inset
+
+.
+ Since the tension is tangant to the rope, the net force is just the difference
+ in the slope of the tangent line between 
+\begin_inset Formula $x$
+\end_inset
+
+ and 
+\begin_inset Formula $x+dx$
+\end_inset
+
+ (scaled of course for the magnitude of the tension).
+ Using Newtons law we can get a differential equation:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F=T\frac{dy}{dx}(x+dx)-T\frac{dy}{dx}(x)=\mu dx\frac{d^{2}y}{dt^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{T}{\mu}\frac{\frac{dy}{dx}(x+dx)-\frac{dy}{dx}(x)}{dx}=\frac{d^{2}y}{dt^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We can clearly see that as we take limit of the length of our differential
+ going to zero, we just get the second space derivative on the left.
+ So,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}y}{dt^{2}}=v^{2}\frac{d^{2}y}{dx^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Side Note, 
+\series default
+this physical intuition gives us an interesting way to look at the second
+ derivative operator.
+ That is the second derivative tells us how much a point differs from the
+ average of its two neighbors.
+ So consider three points, 
+\begin_inset Formula $x-dx$
+\end_inset
+
+, 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $x+dx$
+\end_inset
+
+.
+ Now the second order differential approximation is as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}u}{dx^{2}}=\frac{u(x+dx)-2u(x)+u(x-dx)}{dx^{2}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using our above reasoning we can right this as the differnce betwen the
+ slopes of two tangant lines
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+u(x+dx)-2u(x)+u(x-dx)=(u(x+dx)-u(x))-(u(x)-u(x-dx))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Finally, using this intuition we can think of the second derivative operator
+ as measuring how much a point differs from the average of its two neighbors.
+ Inuitively, if the tangent lines are the same at both ends (and thus the
+ tension difference is 0), then the middle point lies on the line connecting
+ them and thus the net acceleration is 0 (i.e.
+ the acceleration is 0).
+ However, if there is a difference in the tangent lines (tension), 
+\begin_inset Formula $u(x+dx)-u(x)$
+\end_inset
+
+ differs from 
+\begin_inset Formula $u(x)-u(x-dx)$
+\end_inset
+
+, thus there is a net force on the at 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ As shown below this is equivalent to the point x differing from the average
+ of the two points around.
+ Which again is equivalent to it not lying on the line connecting the two
+ points around it.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{u(x+dx)+u(x-dx)}{2}-u(x)=\frac{u(x+dx)+u(x-dx)-2u(x)}{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+So we get an interesting way of looking at the wave equation.
+ It says that looking at some line segement, the acceleration that line
+ segment feels is proportional to how far displaced that point is from the
+ line connecting the two points to its left and right.
+\end_layout
+
+\begin_layout Section
+Solving the Wave Equation and Boundary Conditions
+\end_layout
+
+\begin_layout Section
+Interference and Phasors
+\end_layout
+
+\begin_layout Standard
+Suppose you have two waves on the same medium, then the overal wave is just
+ the superposition of the two: 
+\begin_inset Formula $y(x,t)=y_{1}(x,t)+y_{2}(x,t)$
+\end_inset
+
+.
+ Consider two waves of equal amplitude that differ by some phase 
+\begin_inset Formula $\phi$
+\end_inset
+
+.
+ Then the resulting wave is:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y(x,t)=y_{m}(\sin(kx-wt)+\sin(kx-wt+\phi))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y(x,t)=2y_{m}\cos(.5\phi)\sin(kx-wt+.5\phi)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus the resulting wave is simpy a sin wave whose amplitude depends on how
+ in phase the two contributing waves are.
+ But what if the two waves do not have the same amplitudes, but still have
+ the same temporal and spatial frequency and are possibly shifted in phase?
+ That is where phasors come into play.
+ Phasors seem a bit silly, just use Euler's formula)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{1}(x,t)=y_{1m}\sin(kx-wt)=\frac{1}{2i}(e^{i\xi}-e^{-i\xi})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{2}(x,t)=y_{2m}\sin(kx-wt+\phi)=\frac{1}{2i}(e^{i\xi+i\phi}-e^{-i\xi-i\phi})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(y_{1}+y_{2})(x,t)=\frac{1}{2i}(e^{i\xi}(1+e^{i\phi})-e^{-i\xi}(1-e^{-i\phi}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $\xi=kx-wt$
+\end_inset
+
+.
+ So let 
+\begin_inset Formula $e^{i\alpha}=(1+e^{i\phi})$
+\end_inset
+
+ and 
+\begin_inset Formula $e^{-i\beta}=(1-e^{-i\phi})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(y_{1}+y_{2})(x,t)=\frac{1}{2i}(e^{i\xi+i\alpha}-e^{-i\xi}(1-e^{-i\phi-i\beta}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now multipy and divide by 
+\begin_inset Formula $e^{(\beta-\alpha)i/2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(y_{1}+y_{2})(x,t)=\frac{e^{i(\alpha-\beta)/2}}{2i}(e^{i\xi+\alpha i/2+\beta i/2}-e^{-i\xi}(1-e^{-i\phi-\beta i/2-\alpha i/2}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(y_{1}+y_{2})(x,t)=y_{m}'\sin(kx-wt+\gamma)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Where 
+\begin_inset Formula $y'_{m}=e^{i(\alpha-\beta)/2}$
+\end_inset
+
+ and 
+\begin_inset Formula $\gamma=\frac{\alpha+\beta}{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Standing Waves
+\end_layout
+
+\begin_layout Itemize
+Reasonance
+\end_layout
+
+\end_body
+\end_document

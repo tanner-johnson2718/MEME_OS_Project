@@ -1,0 +1,610 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Fundametals of Basic Classical Mechanics
+\end_layout
+
+\begin_layout Abstract
+The goal of this document is to organize, abstract, and consolidate that
+ which is learned typically in a first semester college level, calc based
+ physics course.
+ More formally, it is define the basic quantities and relations of interest
+ in Newtonian Mechanics.
+ Electricty and magnitism are considered out of scope, as is more technical
+ formulations of Newtonian physics such as Langrangian mechanics.
+ We will also discuss and generalize the application of these basic quantities
+ and relations to simple systems.
+ Focus will be on presenting the material from a first principals point
+ of view and finding the essential take away of this subject.
+\end_layout
+
+\begin_layout Section
+Position and Motion
+\end_layout
+
+\begin_layout Standard
+The most unit we will consider in this document is that of the a point particle.
+ This point particle exists at a specific point in space given by a 3 dimensiona
+l vector over the real numbers.
+ We will usually denote this as 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Moreover, a particles state is also described by a time, 
+\begin_inset Formula $t$
+\end_inset
+
+.
+ Thus it occupies a point and a time.
+ This is a single real number.
+ Thus we can usually consider a function 
+\begin_inset Formula $x(t)$
+\end_inset
+
+ that takes a single real value and outputs a 3 dimensional spacial vector
+ describing its position.
+ The geometry of this 3+1 space is flat.
+ In that the coordinates are not coupled in anyway and simply lie orthognal
+ to one another.
+\end_layout
+
+\begin_layout Standard
+Now, we describe motion as simply derivative with respect to time.
+ So velocity 
+\begin_inset Formula $v=\frac{dx}{dt}$
+\end_inset
+
+ is the first derivative of position with respect to time.
+ Acceleration 
+\begin_inset Formula $a=\frac{d^{2}x}{dt^{2}}.$
+\end_inset
+
+ We will not further discuss this.
+ Finally, a point particle also has an associated quantity mass, 
+\begin_inset Formula $m>0$
+\end_inset
+
+.
+ It is usually taken to be constant with time, but when disucssing collection
+ of point particles we can take about mass as a function of time.
+ The mass is a measure of how 
+\begin_inset Quotes eld
+\end_inset
+
+hard
+\begin_inset Quotes erd
+\end_inset
+
+ it is to move the particle and how much it resists acceleration.
+ This will be formalized with Newton's laws, but as an initial defintion
+ mass is a scalar quantity associated with a point particle that gives its
+ proprotionality constant to its resistance to motion.
+\end_layout
+
+\begin_layout Standard
+So with this view of the universe, our world is very simply.
+ Everything is composed of infimetisial point particles.
+ They are uniquely described by a 3+1 dimensional space-time, an operator
+ (
+\begin_inset Formula $\frac{d}{dt})$
+\end_inset
+
+ which gives its motion through the space, and a scalar quantity describing
+ how much this point particle doesn't like to move.
+ From this we can describe a wide varity of physical phenonemon and with
+ additional laws, can define the ground work for all of classical physics.
+\end_layout
+
+\begin_layout Section
+Newton's Laws
+\end_layout
+
+\begin_layout Standard
+Newtwon's Laws are three laws which describe how we can set up equations
+ that model how our universe we laid out in the previous section will evolve
+ with time and what state will evolve through and too.
+ Before stating these law's we must introduce an additional construct in
+ this universe.
+ That is of a force.
+ A force intuitivly is just a push or pull.
+ It is fomally a 3 dimentional vector quantity that lies in our 3+1 space
+ and acts on a point particle.
+ It can vary with time and is fomally defined in the second.
+ So, these law's are
+\end_layout
+
+\begin_layout Enumerate
+The velocity of particle will not change unless acted upon by a force
+\end_layout
+
+\begin_layout Enumerate
+A force induces an acceleration, inversly proportional to mass: 
+\begin_inset Formula $F=ma$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+All forces have an equal and opposite reactionary force
+\end_layout
+
+\begin_layout Standard
+It should be noted here that our chose of coordinates is free as long as
+ are coordinate frames i,e.
+ where we measure postion, velocity, and acceleration from are not exelerating
+ relative to one another.
+ In other words if you are moving with constant velocity relative to some
+ other observer you will observe the same forces and thus dynamics of whatever
+ system you are studying.
+ So a force is a push or a pull on a point particle, it is a vector, and
+ we add the detail that it follows the laws of super posistion.
+ That is if more than one force acts on a particle, the resulting dynamics
+ are as if a single net force equal to the sum all forces is acting on the
+ point particle 
+\begin_inset Formula $F_{net}=\sum F_{i}$
+\end_inset
+
+.
+ Now these laws lay out a simple universe.
+ Our point particles in this universe do not change velocity unless there
+ is a non zero force acting on it.
+ A net force governs a particles acceleration.
+ And for every force that exists there is an equal and opposite force that
+ must also exist (usually on another body).
+ Thus we have a recipe for constructing differential equations in our univers.
+ First determine the forces acting on a system then simply solve the resulting
+ differential equation 
+\begin_inset Formula $F=ma$
+\end_inset
+
+.
+ Easier said than done.
+\end_layout
+
+\begin_layout Itemize
+Free falling
+\end_layout
+
+\begin_layout Itemize
+Projectile motion
+\end_layout
+
+\begin_layout Itemize
+Friction
+\end_layout
+
+\begin_layout Section
+Energy and Work
+\end_layout
+
+\begin_layout Itemize
+Total energy 
+\begin_inset Formula $E=K+U+E_{leak}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $K=.5mv^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W=-\triangle U$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W=\intop F(x)dx$
+\end_inset
+
+ in 1D and 
+\begin_inset Formula $W=\intop F(x)\cdot ds$
+\end_inset
+
+ in 3D
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F$
+\end_inset
+
+= -
+\begin_inset Formula $\frac{dU}{dx}$
+\end_inset
+
+ in 1D and 
+\begin_inset Formula $F=-\nabla U$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Could use some visuals here
+\end_layout
+
+\begin_layout Itemize
+Energy is accounting tool that allows us to look over the detaisl about
+ what happens at two points and only focus on the in and out, starting and
+ final.
+\end_layout
+
+\begin_layout Itemize
+Connection betwen work, force and potential
+\end_layout
+
+\begin_layout Itemize
+How would anyone come up with the idea for energy?
+\end_layout
+
+\begin_layout Itemize
+What about kinetic energy
+\end_layout
+
+\begin_layout Itemize
+Well once you have E and KE, U is no that much of a stretch
+\end_layout
+
+\begin_layout Itemize
+Neither is the defintin of W as delta U, but how does that connect to defintion
+ of force over a displacement? Well no delta U unless there is a displacement
+\end_layout
+
+\begin_layout Itemize
+Fundamental idea is that this quantity is conserved
+\end_layout
+
+\begin_layout Itemize
+Ex
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Springs
+\end_layout
+
+\begin_layout Itemize
+Pendulum
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Momentum and Impulse
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $p=mv$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $J=\triangle p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F=\frac{dp}{dt}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $J=\int F(t)dt$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Collisions
+\end_layout
+
+\begin_layout Itemize
+Conserved
+\end_layout
+
+\begin_layout Itemize
+Rockets
+\end_layout
+
+\begin_layout Section
+Angular Position and Motion
+\end_layout
+
+\begin_layout Itemize
+Can replace 
+\begin_inset Formula $x,v,a$
+\end_inset
+
+ with 
+\begin_inset Formula $\theta,w,\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x\sim s=\theta r$
+\end_inset
+
+ arc length.
+ 
+\begin_inset Formula $v_{t}=wr$
+\end_inset
+
+ velocity always tangetial to path by defintion.
+\end_layout
+
+\begin_layout Itemize
+uniform cirular motion
+\end_layout
+
+\begin_layout Itemize
+Non unirform
+\end_layout
+
+\begin_layout Itemize
+Acceleration has two components
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Acceleration to maintain uniform cicular motion points inward radially:
+ 
+\begin_inset Formula $a_{r}=w^{2}r=\frac{v^{2}}{r}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Show this starting from paramteric equation of a circle
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Acceleration to increase angular velocity is tagential to path: 
+\begin_inset Formula $a_{t}=\alpha r$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Period 
+\begin_inset Formula $T=\frac{2\pi}{w}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Torque, Newton's Laws in Angular Form, and Rigid Bodies
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $F=ma$
+\end_inset
+
+ ...
+ 
+\begin_inset Formula $Fr=mr^{2}\alpha$
+\end_inset
+
+ ...
+ 
+\begin_inset Formula $\tau=I\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+motiviates this 
+\begin_inset Formula $K=.5mv^{2}=.5mw^{2}r^{2}=.5Iw^{2}$
+\end_inset
+
+ where 
+\begin_inset Formula $I=mr^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+intuitive defintion of torqueq also motivates 
+\begin_inset Formula $\tau=rF_{perp}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $I=\int r^{2}dm$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $W=\int\tau d\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Parallel Axis Thereom.
+ Prove it.
+\end_layout
+
+\begin_layout Itemize
+Calculate moment of inertia for some bodies
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Thin uniform rod about its midpoint: 
+\begin_inset Formula $I=\int r^{2}dm$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dm=\frac{dx}{L}M$
+\end_inset
+
+ and 
+\begin_inset Formula $r(x)=x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $I=\frac{2M}{L}\intop_{0}^{L/2}x^{2}dx=\frac{2M}{3L}(\frac{L}{2})^{3}=\frac{ML^{2}}{12}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+\begin_inset Formula $\tau=r\times F$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $l=r\times p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $L=Iw$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\tau=\frac{dl}{dt}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Angular momentum conserved
+\end_layout
+
+\begin_layout Itemize
+Rolling without slippage
+\end_layout
+
+\begin_layout Itemize
+Rolling with slippage
+\end_layout
+
+\begin_layout Itemize
+The yo-yo
+\end_layout
+
+\end_body
+\end_document
